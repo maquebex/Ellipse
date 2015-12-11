@@ -28,4 +28,8 @@ dependencies {
     compile 'com.getbase:floatingactionbutton:1.10.1'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
     compile 'com.android.support:support-v4:22.2.1'
+
+    // TODO replace this with Krumbs SDK version once available on Artifactory
+//    compile 'com.krumbs.getkrumbs.sdk:krumbssdk:1.0.0-SNAPSHOT'
+
 }
