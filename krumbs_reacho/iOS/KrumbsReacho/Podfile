@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+xcodeproj 'SampleApp/SampleApp.xcodeproj'
+target 'SampleApp' do
+  pod 'MaterialControls', '~> 1.0.2'
+  pod 'JTHamburgerButton', '~> 1.0'
+  pod 'FontAwesomeKit', '~> 2.2.0'
+end
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>FontAwesomeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JTHamburgerButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MaterialControls-MaterialControls.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MaterialControls.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SampleApp.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1BBCAC0FC88ACD82130816609DC540BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AB3DC82478A0FEE7EC370B23D8314083</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEE90A4F0AAC15EFE3D2EB3C1536C92B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C1F47E282CC30E59A763E8A6D132505F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9F1B3A3281633797F27632DF12DBFC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

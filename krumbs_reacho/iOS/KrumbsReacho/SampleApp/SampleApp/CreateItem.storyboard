@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <scenes>
+        <!--Post Item-->
+        <scene sceneID="g0A-k9-dts">
+            <objects>
+                <viewController storyboardIdentifier="CreateItemViewController" id="mft-uc-7yd" userLabel="Post Item" customClass="CreateItemViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JFw-KU-Vyl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cg9-d3-S6x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9tO-me-iUf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="662"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TeC-M2-kzk">
+                                <rect key="frame" x="0.0" y="60" width="375" height="193"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Va5-D5-anx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="193"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oup-ph-MRS" userLabel="CameraButton" customClass="MDButton">
+                                                <rect key="frame" x="47" y="49" width="100" height="100"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.6470588235294118" green="0.094117647058823528" blue="0.12941176470588237" alpha="1" colorSpace="calibratedRGB"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <inset key="imageEdgeInsets" minX="15" minY="20" maxX="15" maxY="20"/>
+                                                <size key="titleShadowOffset" width="3" height="0.0"/>
+                                                <state key="normal" image="camera-icon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
+                                                        <color key="value" red="0.64705882349999999" green="0.094117647060000004" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O6-re-2h5" userLabel="CameraButton" customClass="MDButton">
+                                                <rect key="frame" x="229" y="49" width="100" height="100"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.64705882349999999" green="0.094117647060000004" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                                <size key="titleShadowOffset" width="3" height="0.0"/>
+                                                <state key="normal" image="gallery-icon"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="rippleColor">
+                                                        <color key="value" red="0.64705882349999999" green="0.094117647060000004" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nA9-hs-k2o" userLabel="AcceptButton">
+                                                <rect key="frame" x="289" y="8" width="31" height="25"/>
+                                                <animations/>
+                                                <state key="normal" image="check-icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mf-pt-Rte" userLabel="CloseButton">
+                                                <rect key="frame" x="328" y="8" width="31" height="25"/>
+                                                <animations/>
+                                                <state key="normal" image="cross-icon"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="upload an image which you want to spread" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TR9-ao-PI5">
+                                                <rect key="frame" x="32" y="157" width="311" height="28"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.87450980392156863" green="0.10588235294117647" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZE1-2l-ZVb">
+                                <rect key="frame" x="0.0" y="253" width="375" height="389"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bW1-lO-Thh">
+                                        <rect key="frame" x="20" y="8" width="335" height="102"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUO-W3-cwD">
+                                                <rect key="frame" x="17" y="8" width="526" height="30"/>
+                                                <animations/>
+                                                <accessibility key="accessibilityConfiguration" hint="Write a title"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Provide a Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgO-zW-yrC">
+                                                <rect key="frame" x="17" y="52" width="526" height="30"/>
+                                                <animations/>
+                                                <accessibility key="accessibilityConfiguration" hint="Write a title"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xF-zr-Uss">
+                                        <rect key="frame" x="20" y="124" width="335" height="41"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crp-CE-s7Q">
+                                                <rect key="frame" x="18" y="10" width="137" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VD6-TO-fvM">
+                                        <rect key="frame" x="20" y="179" width="335" height="202"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20D-XC-eTo">
+                                                <rect key="frame" x="19" y="8" width="92" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="euV-cc-GJ4"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="662"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrO-UO-AyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287.5" y="489"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera-icon" width="82" height="58"/>
+        <image name="check-icon" width="31" height="25"/>
+        <image name="cross-icon" width="17" height="16"/>
+        <image name="gallery-icon" width="37" height="41"/>
+    </resources>
+</document>
