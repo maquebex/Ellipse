@@ -15,6 +15,9 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        flatDir {
+            dirs 'libs'
+        }
 
         // Uncomment and configure this when KrumbsSDK library is available on artifactory
 //        maven { url "http://localhost:8081/artifactory/libs-release-local" }
