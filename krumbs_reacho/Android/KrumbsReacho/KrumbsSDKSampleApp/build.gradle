@@ -1,4 +1,8 @@
 apply plugin: 'com.android.application'
+repositories {
+    mavenCentral()
+    maven { url "${System.env.HOME}/.m2/repository" } // mavenLocal()
+}
 
 android {
     compileSdkVersion 23
@@ -20,10 +24,7 @@ android {
 }
 
 dependencies {
-//    compile(name:'krumbs-sdk-debug', ext:'aar')
-    compile ('io.krumbs:krumbs-sdk-debug:1.0@aar') {
-        transitive = true;
-    }
+    compile 'io.krumbs:app:1.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:23.0.0'
     compile 'com.getbase:floatingactionbutton:1.10.1'

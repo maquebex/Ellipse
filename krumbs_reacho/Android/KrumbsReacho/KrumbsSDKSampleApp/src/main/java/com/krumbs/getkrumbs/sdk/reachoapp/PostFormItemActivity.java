@@ -14,8 +14,6 @@ import android.widget.ImageView;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.FontAwesomeIcons;
 
-import io.krumbs.context.intent.ExpressionalIntent;
-import io.krumbs.krumbscamera.adapter.ContextSwitchAdapter;
 import io.krumbs.krumbscamera.camera.KCameraFrgment;
 
 public class PostFormItemActivity extends AppCompatActivity {
@@ -63,14 +61,10 @@ public class PostFormItemActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("Start SDK Camera");
-                FragmentTransaction ft =
+                FragmentTransaction fragmentTransaction  =
                         getSupportFragmentManager().beginTransaction();
-                ExpressionalIntent expressionalIntent = new ExpressionalIntent();
-                ContextSwitchAdapter contextSwitchAdapter = new ContextSwitchAdapter(null, null, null);
-                System.out.println("End SDK Camera");
                 KCameraFrgment kCameraFrgment = new KCameraFrgment();
-//                KCameraFrgment kCameraFrgment = new KCameraFrgment();
-//                ft.add(R.id.fullscreen_content, kCameraFrgment);
+                fragmentTransaction.add(R.id.fullscreen_content, kCameraFrgment).commit();
             }
 
         });
