@@ -1,0 +1,75 @@
+{
+    "intents": [
+                {
+                "Happy": {
+                "synonyms": [
+                             "Happy",
+                             "Delighted",
+                             "Glad",
+                             "Thrilled",
+                             "Cheerful",
+                             "Smile",
+                             "Happiness",
+                             "Fulloflife",
+                             "Sunshine",
+                             "Positive",
+                             "Enjoy",
+                             "Hope",
+                             "Inspiration",
+                             "Radiant",
+                             "Bonheur"
+                             ],
+                "unicode": "1F600",
+                "expression_id": 1,
+                "resource_name": "1F600"
+                }
+                },
+                
+                {
+                "Angry": {
+                "synonyms": [ ],
+                "unicode": "1F621",
+                "expression_id": 2,
+                "resource_name": "1F621"
+                }
+                },
+                
+                {
+                "Sad": {
+                "synonyms": [ ],
+                "unicode": "1F621",
+                "expression_id": 3,
+                "resource_name": "1F621"
+                }
+                },
+                
+                {
+                
+                "Arrived": {
+                "synonyms": [
+                             "Arrived",
+                             "Finally",
+                             "Justreached",
+                             "Homesweethome",
+                             "Peaceout",
+                             "Travel",
+                             "Destination",
+                             "Comingsoon",
+                             "Home",
+                             "Goodbye",
+                             "Ciao",
+                             "Hastalavista",
+                             "Adios",
+                             "Aurevoir",
+                             "Bonjour",
+                             "Arrivederci",
+                             "Sayonara"
+                             ],
+                "unicode": "1F6A9",
+                "expression_id": 4,
+                "resource_name": "1F6A9"
+                }
+                }
+                
+                ]
+}

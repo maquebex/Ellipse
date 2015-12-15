@@ -1,0 +1,118 @@
+{
+    "intents": [
+                {
+                "Healthy Food": {
+                "synonyms": [
+                             "Healthy Food",
+                             "Healthy",
+                             "Cleaneating",
+                             "Vegan",
+                             "Greens",
+                             "Diet",
+                             "Fitness",
+                             "Weightloss",
+                             "Motivation",
+                             "Fitfam",
+                             "Eatclean"
+                             ],
+                "unicode": "1F351",
+                "expression_id": 2,
+                "resource_name": "1F351"
+                }
+                },
+                {
+                "Junk Food": {
+                "synonyms": [
+                             "Junk Food",
+                             "Guiltypleasures",
+                             "Carbs",
+                             "Cheatday",
+                             "Guiltfree",
+                             "Trashfood",
+                             "Fries",
+                             "Dessert",
+                             "Livethelittlethings",
+                             "Foodporn",
+                             "Unhealthyfood"
+                             ],
+                "unicode": "1F35F",
+                "expression_id": 1,
+                "resource_name": "1F35F"
+                }
+                },
+                {
+                "Yum": {
+                "synonyms": [
+                             "Yum",
+                             "Tasty",
+                             "Yummy",
+                             "Hungry",
+                             "Craving",
+                             "Foodporn",
+                             "Delish",
+                             "Delicious",
+                             "Foodgasm",
+                             "Nomnim",
+                             "Foodie",
+                             "Foodpic",
+                             "Lovefood",
+                             "Sweettooth",
+                             "Dessertporn"
+                             ],
+                "unicode": "1F60B",
+                "expression_id": 3,
+                "resource_name": "1F60B"
+                }
+                },
+                {
+                "Drinking": {
+                "synonyms": [
+                             "Drinking",
+                             "Enjoyingcoffee",
+                             "Thirsty",
+                             "Goodtimes",
+                             "Happyhour",
+                             "Sundayfunday",
+                             "Enjoyingdrinks",
+                             "Tipsy",
+                             "Enjoyingcocktail",
+                             "Nothingtodo",
+                             "Slurp",
+                             "Drinkup",
+                             "Drunk"
+                             ],
+                "unicode": "1F379",
+                "expression_id": 4,
+                "resource_name": "1F379"
+                }
+                },
+                {
+                "Relax": {
+                "synonyms": [
+                             "Relax",
+                             "Relax",
+                             "Peace",
+                             "Tranquility",
+                             "Beach",
+                             "Content",
+                             "Lifestyle",
+                             "Rest",
+                             "Holiday",
+                             "Knockout",
+                             "Lightsout",
+                             "Sleepyhead",
+                             "Sleeptime",
+                             "Passout",
+                             "Nightynight",
+                             "Bedtime",
+                             "Life",
+                             "Tired"
+                             ],
+                "unicode": "1F60E",
+                "expression_id": 5,
+                "resource_name": "1F60E"
+                }
+                }
+                
+                ]
+}

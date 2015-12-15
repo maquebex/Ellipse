@@ -1,0 +1,22 @@
+{
+    "Bites": {
+        "index": 1,
+        "intents_file": "bites.json"
+    },
+    "Causes": {
+        "index": 2,
+            "intents_file": "causes.json"
+    },
+    "News": {
+        "index": 3,
+        "intents_file": "news.json"
+    },
+    "Events": {
+        "index": 4,
+        "intents_file": "events.json"
+    },
+    "Humans": {
+        "index": 5,
+        "intents_file": "humans.json"
+    }
+}

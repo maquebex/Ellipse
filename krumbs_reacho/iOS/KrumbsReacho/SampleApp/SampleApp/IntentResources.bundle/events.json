@@ -1,0 +1,137 @@
+{
+  "intents": [
+              {
+              "Happy": {
+              "synonyms": [
+                           "Happy",
+                           "Delighted",
+                           "Glad",
+                           "Thrilled",
+                           "Cheerful",
+                           "Smile",
+                           "Happiness",
+                           "Fulloflife",
+                           "Sunshine",
+                           "Positive",
+                           "Enjoy",
+                           "Hope",
+                           "Inspiration",
+                           "Radiant",
+                           "Bonheur"
+                           ],
+              "unicode": "1F600",
+              "expression_id": 1,
+              "resource_name": "1F600"
+              }
+              },
+              "Loving it!": {
+              "synonyms": [
+                           "Admire",
+                           "Like",
+                           "Me",
+                           "Hot",
+                           "Lawofattraction",
+                           "Photooftheday",
+                           "Picoftheday",
+                           "Selfpotrait",
+                           "Lovem",
+                           "Whoneedsaselfiestick",
+                           "Swagger"
+                           ],
+              "unicode": "1F60D",
+              "expression_id": 2,
+              "resource_name": "1F60D"
+              },
+              {
+              "Having fun": {
+              "synonyms": [
+                           "Having fun",
+                           "Thecrew",
+                           "Awesometime",
+                           "Amazingfriends",
+                           "Amazing",
+                           "Swag"
+                           ],
+              "unicode": "1F38A",
+              "expression_id": 3,
+              "resource_name": "1F38A"
+              }
+              },
+              {
+              "Arrived": {
+              "synonyms": [
+                           "Arrived",
+                           "Finally",
+                           "Justreached",
+                           "Homesweethome",
+                           "Peaceout",
+                           "Travel",
+                           "Destination",
+                           "Comingsoon",
+                           "Home",
+                           "Goodbye",
+                           "Ciao",
+                           "Hastalavista",
+                           "Adios",
+                           "Aurevoir",
+                           "Bonjour",
+                           "Arrivederci",
+                           "Sayonara"
+                           ],
+              "unicode": "1F6A9",
+              "expression_id": 4,
+              "resource_name": "1F6A9"
+              }
+              },
+              {
+              "Friends & Family": {
+              "synonyms": [
+                           "Friends & Family",
+                           "Familyfirst",
+                           "Crazybunch",
+                           "Familytime",
+                           "Familyovereverything",
+                           "Bff",
+                           "Friendsforever",
+                           "Friendsforlife",
+                           "Bestfriends",
+                           "Itsnotjustabadgeitsawayoflife",
+                           "Besties",
+                           "Lunaticfringe",
+                           "Weirdos",
+                           "Cousins",
+                           "Sisters",
+                           "Gang",
+                           "Gangfamily",
+                           "Godisgood",
+                           "Blessed",
+                           "Thankful",
+                           "Bonding",
+                           "Fam",
+                           "Familyfun",
+                           "Family",
+                           "Lovethem",
+                           "Funtimes"
+                           ],
+              "unicode": "1F46A",
+              "expression_id": 5,
+              "resource_name": "1F46A"
+              }
+              },
+              {
+              "Awesome Experience": {
+              "synonyms": [
+                           "Awesome Experience",
+                           "Awesome",
+                           "Funtrip",
+                           "Thishowidoit",
+                           "Adaytoremember",
+                           "Nostalgia"
+                           ],
+              "unicode": "1F44C",
+              "expression_id": 6,
+              "resource_name": "1F44C"
+              }
+              },
+    ]
+}

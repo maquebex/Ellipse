@@ -15,7 +15,13 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-
+//        maven {
+//            url "http://localhost:8081/artifactory/libs-snapshot-local"
+//            credentials {
+//                username 'consumer'
+//                password '<enter API key here>'
+//            }
+//        }
         // Uncomment and configure this when KrumbsSDK library is available on artifactory
 //        maven { url "http://localhost:8081/artifactory/libs-release-local" }
 //        maven { url "http://localhost:8081/artifactory/libs-snapshot-local" }

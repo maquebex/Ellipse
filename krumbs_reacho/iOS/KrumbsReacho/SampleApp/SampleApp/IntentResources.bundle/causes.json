@@ -1,0 +1,64 @@
+{
+    "intents": [
+                {
+                "Angry": {
+                "synonyms": [
+                             "Upset",
+                             "Omg",
+                             "Doh",
+                             "Cheermeup",
+                             "Depressed",
+                             "Frustrated",
+                             "Dejected",
+                             "Sad",
+                             "Highsandlows",
+                             "Melancholia",
+                             "Lame",
+                             "Bummed",
+                             "Stressed",
+                             "Alone",
+                             "Sadness",
+                             "Tears",
+                             "Lonely",
+                             "Goingmental",
+                             "Badmood",
+                             "Hurt",
+                             "Anxious",
+                             "Worthless"
+                             ],
+                "unicode": "1F621",
+                "expression_id": 1,
+                "resource_name": "1F621"
+                }
+                },
+                
+                {
+                "Sad": {
+                "synonyms": [ ],
+                "unicode": "1F621",
+                "expression_id": 2,
+                "resource_name": "1F621"
+                }
+                },
+
+                {
+                "Shock": {
+                "synonyms": [ ],
+                "unicode": "1F621",
+                "expression_id": 3,
+                "resource_name": "1F621"
+                }
+                },
+
+                {
+                "Dislike": {
+                "synonyms": [ ],
+                "unicode": "1F621",
+                "expression_id": 4,
+                "resource_name": "1F621"
+                }
+                }
+                
+                ]
+}
+

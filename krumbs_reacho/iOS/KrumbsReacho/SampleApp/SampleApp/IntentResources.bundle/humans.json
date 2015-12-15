@@ -1,0 +1,39 @@
+{
+  "intents": [
+              {
+              "Surprised": {
+              "synonyms": [
+                           "Surprised",
+                           "Seriously",
+                           "Wow",
+                           "Wtf",
+                           "Hilarious",
+                           "Weird",
+                           "Gosh"
+                           ],
+              "unicode": "1F603",
+              "expression_id": 1,
+              "resource_name": "1F603"
+              }
+              },
+              {
+              "Admire": {
+              "synonyms": [
+                           "Admire",
+                           "Like",
+                           "Me",
+                           "Hot",
+                           "Lawofattraction",
+                           "Photooftheday",
+                           "Picoftheday",
+                           "Selfpotrait",
+                           "Lovem",
+                           "Whoneedsaselfiestick",
+                           "Swagger"
+                           ],
+              "unicode": "1F60D",
+              "expression_id": 2,
+              "resource_name": "1F60D"
+              },
+    ]
+}
