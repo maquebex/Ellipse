@@ -12,9 +12,9 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-        // Uncomment and configure this when KrumbsSDK library is available on artifactory
-        maven { url "http://52.32.236.187:8081/artifactory/libs-release-local" }
-//        maven { url "http://52.32.236.187:8081/artifactory/libs-snapshot-local" }
+        def krumbs_artifactory = artifactory_host_url
+        maven { url ("$krumbs_artifactory/libs-release-local") }
+        maven { url ("$krumbs_artifactory/libs-snapshot-local") }
 
     }
 }
