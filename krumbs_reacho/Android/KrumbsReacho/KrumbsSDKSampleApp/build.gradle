@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 repositories {
     mavenCentral()
-    maven { url "${System.env.HOME}/.m2/repository" } // mavenLocal()
 }
 
 android {
@@ -24,14 +23,9 @@ android {
 }
 
 dependencies {
-    compile 'io.krumbs:krumbs-sdk:1.0'
+    compile 'io.krumbs.sdk:krumbs-sdk:1.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:23.0.0'
     compile 'com.getbase:floatingactionbutton:1.10.1'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
-//    compile 'com.android.support:support-v4:23.0.0'
-    compile 'ch.acra:acra:4.7.0'
-
-    // TODO replace this with Krumbs SDK version once available on Artifactory
-//    compile 'com.krumbs.getkrumbs.sdk:krumbssdk:1.0.0-SNAPSHOT'
 }

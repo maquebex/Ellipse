@@ -6,22 +6,15 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.5.0'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
 allprojects {
     repositories {
         jcenter()
-        flatDir {
-            dirs 'libs'
-        }
-
         // Uncomment and configure this when KrumbsSDK library is available on artifactory
-//        maven { url "http://localhost:8081/artifactory/libs-release-local" }
-//        maven { url "http://localhost:8081/artifactory/libs-snapshot-local" }
+        maven { url "http://52.32.236.187:8081/artifactory/libs-release-local" }
+//        maven { url "http://52.32.236.187:8081/artifactory/libs-snapshot-local" }
 
     }
 }
