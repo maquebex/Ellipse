@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.FontAwesomeIcons;
 
-import io.krumbs.krumbscamera.camera.KCameraFrgment;
+import io.krumbs.sdk.krumbscamera.camera.KCameraFrgment;
 
 public class PostFormItemActivity extends AppCompatActivity {
 

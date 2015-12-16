@@ -24,7 +24,7 @@ android {
 }
 
 dependencies {
-    compile 'io.krumbs:app:1.0'
+    compile 'io.krumbs:krumbs-sdk:1.0'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:23.0.0'
     compile 'com.getbase:floatingactionbutton:1.10.1'
