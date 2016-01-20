@@ -1,17 +1,20 @@
 package com.krumbs.getkrumbs.sdk.reachoapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.FontAwesomeIcons;
+
+import io.krumbs.sdk.krumbscamera.camera.KCameraFrgment;
 
 public class PostFormItemActivity extends AppCompatActivity {
 
@@ -58,7 +61,10 @@ public class PostFormItemActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("Start SDK Camera");
-
+                FragmentTransaction fragmentTransaction  =
+                        getSupportFragmentManager().beginTransaction();
+                KCameraFrgment kCameraFrgment = new KCameraFrgment();
+                fragmentTransaction.add(R.id.fullscreen_content, kCameraFrgment).commit();
             }
 
         });

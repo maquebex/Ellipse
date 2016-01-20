@@ -1,4 +1,7 @@
 apply plugin: 'com.android.application'
+repositories {
+    mavenCentral()
+}
 
 android {
     compileSdkVersion 23
@@ -24,9 +27,5 @@ dependencies {
     compile 'com.android.support:design:23.0.0'
     compile 'com.getbase:floatingactionbutton:1.10.1'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.1.1'
-    compile 'com.android.support:support-v4:23.0.0'
-
-    // TODO replace this with Krumbs SDK version once available on Artifactory
-//    compile 'com.krumbs.getkrumbs.sdk:krumbssdk:1.0.0-SNAPSHOT'
-
+    compile 'io.krumbs.sdk:krumbs-sdk:1.0.1-SNAPSHOT'
 }
