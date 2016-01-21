@@ -1,0 +1,108 @@
+{
+    "intents": [
+                {
+                "Friends & Family": {
+                "synonyms": [
+                             "Friends & Family",
+                             "Familyfirst",
+                             "Crazybunch",
+                             "Familytime",
+                             "Familyovereverything",
+                             "Bff",
+                             "Friendsforever",
+                             "Friendsforlife",
+                             "Bestfriends",
+                             "Itsnotjustabadgeitsawayoflife",
+                             "Besties",
+                             "Lunaticfringe",
+                             "Weirdos",
+                             "Cousins",
+                             "Sisters",
+                             "Gang",
+                             "Gangfamily",
+                             "Godisgood",
+                             "Blessed",
+                             "Thankful",
+                             "Bonding",
+                             "Fam",
+                             "Familyfun",
+                             "Family",
+                             "Lovethem",
+                             "Funtimes"
+                             ],
+                "unicode": "1F46A",
+                "expression_id": 1,
+                "resource_name": "social_friends_and_family"
+                }
+                },
+                {
+                "Surprised": {
+                "synonyms": [
+                             "Surprised",
+                             "Seriously",
+                             "Wow",
+                             "Wtf",
+                             "Hilarious",
+                             "Weird",
+                             "Gosh"
+                             ],
+                "unicode": "1F603",
+                "expression_id": 2,
+                "resource_name": "social_surprised"
+                }
+                },
+                {
+                "Yawn": {
+                "synonyms": [
+                             "Yawn",
+                             "Iambored",
+                             "Facepalm",
+                             "Saveme",
+                             "Help!",
+                             "Fail"
+                             ],
+                "unicode": "1F634",
+                "expression_id": 3,
+                "resource_name": "social_bored"
+                }
+                },
+                {
+                "Funny": {
+                "synonyms": [
+                             "Funny",
+                             "Haha",
+                             "Lol",
+                             "Craziness",
+                             "Funnystuff",
+                             "Lmao",
+                             "Rofl",
+                             "Lmfao",
+                             "Humor",
+                             "Witty",
+                             "Wacky",
+                             "Silly",
+                             "Ctfu"
+                             ],
+                "unicode": "1F61C",
+                "expression_id": 4,
+                "resource_name": "social_funny"
+                }
+                },
+                {
+                "Celebrate": {
+                "synonyms": [
+                             "Celebrate",
+                             "Happybirthday",
+                             "Graduation",
+                             "Wedding",
+                             "Anniversary",
+                             "Babyshower",
+                             "Party"
+                             ],
+                "unicode": "1F44F",
+                "expression_id": 5,
+                "resource_name": "celebrate_clap"
+                }
+                }
+                ]
+}

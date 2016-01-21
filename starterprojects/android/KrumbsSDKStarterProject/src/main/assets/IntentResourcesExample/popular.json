@@ -1,0 +1,142 @@
+{
+    "intents": [
+                {
+                "Happy": {
+                "synonyms": [
+                             "Happy",
+                             "Delighted",
+                             "Glad",
+                             "Thrilled",
+                             "Cheerful",
+                             "Smile",
+                             "Happiness",
+                             "Fulloflife",
+                             "Sunshine",
+                             "Positive",
+                             "Enjoy",
+                             "Hope",
+                             "Inspiration",
+                             "Radiant",
+                             "Bonheur"
+                             ],
+                "unicode": "1F600",
+                "expression_id": 1,
+                "resource_name": "popular_happy"
+                }
+                },
+                {
+                "Upset": {
+                "synonyms": [
+                             "Upset",
+                             "Omg",
+                             "Doh",
+                             "Cheermeup",
+                             "Depressed",
+                             "Frustrated",
+                             "Dejected",
+                             "Sad",
+                             "Highsandlows",
+                             "Melancholia",
+                             "Lame",
+                             "Bummed",
+                             "Stressed",
+                             "Alone",
+                             "Sadness",
+                             "Tears",
+                             "Lonely",
+                             "Goingmental",
+                             "Badmood",
+                             "Hurt",
+                             "Anxious",
+                             "Worthless"
+                             ],
+                "unicode": "1F621",
+                "expression_id": 2,
+                "resource_name": "popular_upset"
+                }
+                },
+                {
+                "Love": {
+                "synonyms": [
+                             "Love",
+                             "Cute",
+                             "Blissful",
+                             "Mylove",
+                             "Loveyou",
+                             "Amor",
+                             "Monamour",
+                             "Monamie",
+                             "Loveofmylife",
+                             "Baby",
+                             "Oneinamillion",
+                             "Miamor",
+                             "Amoremio",
+                             "Loveisintheair",
+                             "Tiamo",
+                             "Monhomme",
+                             "Hunny",
+                             "Gorgeous",
+                             "Awww",
+                             "Adorable",
+                             "Pretty",
+                             "Kissyou",
+                             "Cutiepie",
+                             "Hugs",
+                             "Loverher",
+                             "Lovehim",
+                             "Fluffy",
+                             "Puppylove",
+                             "Ilovemydog",
+                             "Furbaby",
+                             "Dogoftheday",
+                             "Petoftheday"
+                             ],
+                "unicode": "1F60D",
+                "expression_id": 3,
+                "resource_name": "popular_love"
+                }
+                },
+                {
+                "Neutral": {
+                "synonyms": [
+                             "Neutral",
+                             "Whatsup?",
+                             "Chill",
+                             "Hey",
+                             "Hi",
+                             "Howdy",
+                             "Calm"
+                             ],
+                "unicode": "1F611",
+                "expression_id": 5,
+                "resource_name": "popular_neutral"
+                }
+                },
+                {
+                "Taking notes": {
+                "synonyms": [
+                             "Taking notes",
+                             "Nametag",
+                             "Stickynotes",
+                             "Whiteboard",
+                             "Slide",
+                             "Poster",
+                             "Parkingspot",
+                             "Pricetag",
+                             "Reminder",
+                             "Art",
+                             "Doodle",
+                             "Notebook",
+                             "Plans",
+                             "Agenda",
+                             "Planner",
+                             "Writingsign"
+                             ],
+                "unicode": "1F4DD",
+                "expression_id": 4,
+                "resource_name": "note"
+                }
+                }
+                ]
+}
+

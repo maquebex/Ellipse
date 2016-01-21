@@ -1,0 +1,119 @@
+{
+    "intents": [
+                {
+                "Exploring": {
+                "synonyms": [
+                             "Exploring",
+                             "Travelog",
+                             "Naturelife",
+                             "Hiking",
+                             "Wanderlust",
+                             "Lostinnature",
+                             "Adventurers",
+                             "Roughingit",
+                             "Liveauthentic",
+                             "Neverstopexploring",
+                             "Adventure",
+                             "Explore",
+                             "Letsgosomewhere",
+                             "Welltravelled",
+                             "Livefolk",
+                             "Wildernessculture",
+                             "Longtrip",
+                             "Hellyeah"
+                             ],
+                "unicode": "1F43E",
+                "expression_id": 1,
+                "resource_name": "travel_exploring"
+                }
+                },
+                {
+                "Relax": {
+                "synonyms": [
+                             "Relax",
+                             "Relax",
+                             "Peace",
+                             "Tranquility",
+                             "Beach",
+                             "Content",
+                             "Lifestyle",
+                             "Rest",
+                             "Holiday",
+                             "Knockout",
+                             "Lightsout",
+                             "Sleepyhead",
+                             "Sleeptime",
+                             "Passout",
+                             "Nightynight",
+                             "Bedtime",
+                             "Life",
+                             "Tired"
+                             ],
+                "unicode": "1F60E",
+                "expression_id": 2,
+                "resource_name": "travel_relaxing"
+                }
+                },
+                {
+                "Natural Beauty": {
+                "synonyms": [
+                             "Natural Beauty",
+                             "Mothernature",
+                             "Aweinspiring",
+                             "Serene",
+                             "Meditative",
+                             "Landscape",
+                             "Wildlife",
+                             "Sunrise",
+                             "Sunset",
+                             "Moonlit",
+                             "Sky",
+                             "Blue",
+                             "Clouds",
+                             "Mountains",
+                             "Forest",
+                             "Skyscrapers",
+                             "Urbanwalk",
+                             "Funpeople"
+                             ],
+                "unicode": "1F305",
+                "expression_id": 3,
+                "resource_name": "social_natural_beauty"
+                }
+                },
+                {
+                "Awesome Experience": {
+                "synonyms": [
+                             "Cool",
+                             "Formidable",
+                             "Amazing",
+                             "Heartstirring",
+                             "TrulyWonderful",
+                             "Extremely good",
+                             "Exceptional",
+                             "Epic"
+                             ],
+                "unicode": "1F44C",
+                "expression_id": 4,
+                "resource_name": "shopping_awesome_experience"
+                }
+                },
+                {
+                "Bored": {
+                "synonyms": [
+                             "Bored",
+                             "Homesick",
+                             "Missinghome",
+                             "Imissyou",
+                             "Stillalive",
+                             "Misshome",
+                             "Sucks",
+                             "Rainsucks"
+                             ],
+                "unicode": "1F648",
+                "expression_id": 5,
+                "resource_name": "travel_bored"
+                }
+                }
+                ]
+}

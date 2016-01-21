@@ -1,0 +1,90 @@
+{
+    "intents": [
+                {
+                "Admire": {
+                "synonyms": [
+                             "Admire","Like","Me",
+                             "Hot","Lawofattraction",
+                             "Photooftheday","Picoftheday",
+                             "Selfpotrait","Lovem",
+                             "Whoneedsaselfiestick","Swagger"
+                             ],
+                "unicode": "1F60D",
+                "expression_id": 1,
+                "resource_name": "love"
+                }
+                },
+                {
+                "Exercise": {
+                "synonyms": [
+                             "Exercise","Workout","Weightloss",
+                             "Gymrat","Beastmode","Itspo",
+                             "Fitlife","Abs","Dedication",
+                             "Noexcuses","Weightlossjourney","Training",
+                             "Crossfit","Getfit","Fitnessaddict",
+                             "Physique","Bbg","Trainhard",
+                             "Fitnessjourney","Cardio","Bodybuilding",
+                             "Health","Fitmom","Yoga","Running",
+                             "Basketball","Fitspiration","Gym","Gymlife"
+                             ],
+                "unicode": "1F4AA",
+                "expression_id": 2,
+                "resource_name": "exercise"
+                }
+                },
+                {
+                "Having fun": {
+                "synonyms": [
+                             "Having fun","Thecrew","Awesometime",
+                             "Amazingfriends","Amazing","Swag"
+                             ],
+                "unicode": "1F38A",
+                "expression_id": 3,
+                "resource_name": "having_fun"
+                }
+                },
+                {
+                "Arrived": {
+                "synonyms": [
+                             "Arrived","Finally",
+                             "Justreached","Homesweethome",
+                             "Peaceout",
+                             "Travel",
+                             "Destination",
+                             "Comingsoon",
+                             "Home",
+                             "Goodbye",
+                             "Ciao",
+                             "Hastalavista",
+                             "Adios",
+                             "Aurevoir",
+                             "Bonjour",
+                             "Arrivederci",
+                             "Sayonara"
+                             ],
+                "unicode": "1F6A9",
+                "expression_id": 4,
+                "resource_name": "arrived"
+                }
+                },
+                {
+                "Missing you": {
+                "synonyms": [
+                             "Missing you",
+                             "Iloveyou",
+                             "Missinghim",
+                             "Missingher",
+                             "Memories",
+                             "Longdistancerelationship",
+                             "Crushquotes",
+                             "Throwback",
+                             "Heartbroken",
+                             "Bff"
+                             ],
+                "unicode": "1F622",
+                "expression_id": 5,
+                "resource_name": "selfi_missyou"
+                }
+                }
+                ]
+}
