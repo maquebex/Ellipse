@@ -27,12 +27,16 @@ public class MainActivity extends AppCompatActivity {
   private static final String[] PERMISSIONS_LOCATION = {Manifest.permission.ACCESS_COARSE_LOCATION,
           Manifest.permission.ACCESS_FINE_LOCATION};
   private static final int REQUEST_LOCATION = 1;
+  private View cameraView;
+  private View startCaptureButton;
+  private View helloText;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    final View startCaptureButton = findViewById(R.id.kcapturebutton);
-    final View helloText = findViewById(R.id.hello_world);
+    startCaptureButton = findViewById(R.id.kcapturebutton);
+    helloText = findViewById(R.id.hello_world);
+    cameraView = findViewById(R.id.camera_container);
     startCaptureButton.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -45,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
           startCaptureButton.setVisibility(View.INVISIBLE);
           helloText.setVisibility(View.INVISIBLE);
+          cameraView.setVisibility(View.VISIBLE);
           startCamera();
         }
       }
@@ -54,10 +59,24 @@ public class MainActivity extends AppCompatActivity {
 
   private void startCamera() {
     int containerId = R.id.camera_container;
+// SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
     KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
       @Override
-      public void captureCompleted(CompletionState completionState, boolean b, Map<String, Object> map) {
-        View cameraView = findViewById(R.id.camera_container);
+      public void captureCompleted(CompletionState completionState, boolean audioCaptured, Map<String, Object> map) {
+        if(completionState == CompletionState.CAPTURE_SUCCESS) {
+// The local image url for your capture
+          String imagePath = (String)map.get(KCaptureCompleteListener.CAPTURE_MEDIA_IMAGE_PATH);
+          if(audioCaptured) {
+// The local audio url for your capture (if user decided to record audio)
+            String audioPath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_AUDIO_PATH);
+          }
+// The mediaJSON url for your capture
+          String mediaJSONUrl =  (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_JSON_URL);
+          cameraView.setVisibility(View.INVISIBLE);
+          startCaptureButton.setVisibility(View.VISIBLE);
+          helloText.setVisibility(View.VISIBLE);
+
+        }
 
       }
     });

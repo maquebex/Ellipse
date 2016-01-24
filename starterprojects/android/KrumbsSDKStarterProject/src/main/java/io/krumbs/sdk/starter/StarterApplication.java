@@ -30,16 +30,22 @@ public class StarterApplication extends Application {
         String appID = getMetadata(getApplicationContext(), KRUMBS_SDK_APPLICATION_ID);
         String clientKey = getMetadata(getApplicationContext(), KRUMBS_SDK_CLIENT_KEY);
         if (appID != null && clientKey != null) {
+// SDK usage step 1 - initialize the SDK with your application id and client key
             KrumbsSDK.initialize(getApplicationContext(), appID, clientKey);
 
             try {
 
+// SDK usage step 2 - register your customized Intent Panel with the SDK
+
                 // Register the Intent Panel model
                 // the emoji image assets will be looked up by name when the KCapture camera is started
                 // Make sure to include the images in your resource directory before starting the KCapture
+                // Use the 'asset-generator' tool to build your image resources from intent-categories.json
                 String assetPath = "IntentResourcesExample";
                 KrumbsSDK.registerIntentCategories(assetPath);
 
+
+// SDK usage step 3 (optional) - add your Intent Panel view customizations
 
                 // Configure the IntentPanel View (colors & fonts)
                 KIntentPanelConfiguration defaults = KrumbsSDK.getIntentPanelViewConfigurationDefaults();
@@ -52,6 +58,7 @@ public class StarterApplication extends Application {
 
                 KrumbsSDK.setIntentPanelViewConfigurationDefaults(newDefaults);
 
+// SDK usage step 3 (optional) - register users so you can associate their ID (email) with created content with Cloud API
                 // Register user information (if your app requires login)
                 // to improve security on the mediaJSON created.
                 String userEmail = DeviceUtils.getPrimaryUserID(getApplicationContext());
@@ -59,8 +66,6 @@ public class StarterApplication extends Application {
                         .email(userEmail)
                         .firstName(SDK_STARTER_PROJECT_USER_FN)
                         .lastName(SDK_STARTER_PROJECT_USER_SN).build());
-
-
 
 
             } catch (Exception e) {
