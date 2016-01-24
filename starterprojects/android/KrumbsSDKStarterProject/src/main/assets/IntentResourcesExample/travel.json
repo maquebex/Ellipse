@@ -22,9 +22,9 @@
                              "Longtrip",
                              "Hellyeah"
                              ],
-                "unicode": "1F43E",
+                "unicode": "1f43e",
                 "expression_id": 1,
-                "resource_name": "travel_exploring"
+                "resource_name": "emoji_1f43e"
                 }
                 },
                 {
@@ -49,9 +49,9 @@
                              "Life",
                              "Tired"
                              ],
-                "unicode": "1F60E",
+                "unicode": "1f60e",
                 "expression_id": 2,
-                "resource_name": "travel_relaxing"
+                "resource_name": "emoji_1f60e"
                 }
                 },
                 {
@@ -76,9 +76,9 @@
                              "Urbanwalk",
                              "Funpeople"
                              ],
-                "unicode": "1F305",
+                "unicode": "1f305",
                 "expression_id": 3,
-                "resource_name": "social_natural_beauty"
+                "resource_name": "emoji_1f305"
                 }
                 },
                 {
@@ -93,9 +93,9 @@
                              "Exceptional",
                              "Epic"
                              ],
-                "unicode": "1F44C",
+                "unicode": "1f44c",
                 "expression_id": 4,
-                "resource_name": "shopping_awesome_experience"
+                "resource_name": "emoji_1f44c"
                 }
                 },
                 {
@@ -110,9 +110,9 @@
                              "Sucks",
                              "Rainsucks"
                              ],
-                "unicode": "1F648",
+                "unicode": "1f648",
                 "expression_id": 5,
-                "resource_name": "travel_bored"
+                "resource_name": "emoji_1f648"
                 }
                 }
                 ]

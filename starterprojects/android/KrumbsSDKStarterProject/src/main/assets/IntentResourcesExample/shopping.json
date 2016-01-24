@@ -18,9 +18,9 @@
                              "Stuffyoudoforfriends",
                              "Saveme"
                              ],
-                "unicode": "1F616",
+                "unicode": "1f616",
                 "expression_id": 1,
-                "resource_name": "irritate"
+                "resource_name": "emoji_1f616"
                 }
                 },
                 {
@@ -44,9 +44,9 @@
                              "Shoptillyoudrop",
                              "Firstworldproblems"
                              ],
-                "unicode": "1F4B8",
+                "unicode": "1f4b8",
                 "expression_id": 2,
-                "resource_name": "shopping_buy"
+                "resource_name": "emoji_1f4b8"
                 }
                 },
                 {
@@ -76,9 +76,9 @@
                              "Chic",
                              "Onfleek"
                              ],
-                "unicode": "1F525",
+                "unicode": "1f525",
                 "expression_id": 3,
-                "resource_name": "shopping_love"
+                "resource_name": "emoji_1f525"
                 }
                 },
                 {
@@ -96,9 +96,9 @@
                              "Anniversarygift",
                              "Weddinggift"
                              ],
-                "unicode": "1F446",
+                "unicode": "1f446",
                 "expression_id": 4,
-                "resource_name": "shopping_hold_it"
+                "resource_name": "emoji_1f446"
                 }
                 },
                 {
@@ -130,9 +130,9 @@
                              "Bargainhunting",
                              "Bargainshopper"
                              ],
-                "unicode": "1F62E",
+                "unicode": "1f62e",
                 "expression_id": 5,
-                "resource_name": "shopping_bargain"
+                "resource_name": "emoji_1f62e"
                 }
                 }
                 ]

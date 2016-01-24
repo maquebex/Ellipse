@@ -19,9 +19,9 @@
                              "Radiant",
                              "Bonheur"
                              ],
-                "unicode": "1F600",
+                "unicode": "1f600",
                 "expression_id": 1,
-                "resource_name": "popular_happy"
+                "resource_name": "emoji_1f600"
                 }
                 },
                 {
@@ -50,9 +50,9 @@
                              "Anxious",
                              "Worthless"
                              ],
-                "unicode": "1F621",
+                "unicode": "1f621",
                 "expression_id": 2,
-                "resource_name": "popular_upset"
+                "resource_name": "emoji_1f621"
                 }
                 },
                 {
@@ -91,9 +91,9 @@
                              "Dogoftheday",
                              "Petoftheday"
                              ],
-                "unicode": "1F60D",
+                "unicode": "1f60d",
                 "expression_id": 3,
-                "resource_name": "popular_love"
+                "resource_name": "emoji_1f60d"
                 }
                 },
                 {
@@ -107,9 +107,9 @@
                              "Howdy",
                              "Calm"
                              ],
-                "unicode": "1F611",
+                "unicode": "1f611",
                 "expression_id": 5,
-                "resource_name": "popular_neutral"
+                "resource_name": "emoji_1f611"
                 }
                 },
                 {
@@ -132,9 +132,9 @@
                              "Planner",
                              "Writingsign"
                              ],
-                "unicode": "1F4DD",
+                "unicode": "1f4dd",
                 "expression_id": 4,
-                "resource_name": "note"
+                "resource_name": "emoji_1f4dd"
                 }
                 }
                 ]

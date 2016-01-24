@@ -14,12 +14,18 @@ allprojects {
         def krumbs_artifactory = artifactory_host_url
         def krumbs_username = artifactory_username
         def krumbs_password = artifactory_password
-        maven { url ("$artifactory_host_url/libs-snapshot-local")
-        credentials {
+        maven { url ("$artifactory_host_url/libs-release-local")
+            credentials {
                 username ("$krumbs_username")
                 password ("$krumbs_password")
-                    }
-          }
+            }
+        }
+        maven { url ("$artifactory_host_url/libs-snapshot-local")
+            credentials {
+                username ("$krumbs_username")
+                password ("$krumbs_password")
+            }
+        }
     }
 }
 

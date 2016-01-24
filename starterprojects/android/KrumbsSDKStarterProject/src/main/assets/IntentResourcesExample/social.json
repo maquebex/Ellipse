@@ -30,9 +30,9 @@
                              "Lovethem",
                              "Funtimes"
                              ],
-                "unicode": "1F46A",
+                "unicode": "1f46a",
                 "expression_id": 1,
-                "resource_name": "social_friends_and_family"
+                "resource_name": "emoji_1f46a"
                 }
                 },
                 {
@@ -46,9 +46,9 @@
                              "Weird",
                              "Gosh"
                              ],
-                "unicode": "1F603",
+                "unicode": "1f603",
                 "expression_id": 2,
-                "resource_name": "social_surprised"
+                "resource_name": "emoji_1f603"
                 }
                 },
                 {
@@ -61,9 +61,9 @@
                              "Help!",
                              "Fail"
                              ],
-                "unicode": "1F634",
+                "unicode": "1f634",
                 "expression_id": 3,
-                "resource_name": "social_bored"
+                "resource_name": "emoji_1f634"
                 }
                 },
                 {
@@ -83,9 +83,9 @@
                              "Silly",
                              "Ctfu"
                              ],
-                "unicode": "1F61C",
+                "unicode": "1f61c",
                 "expression_id": 4,
-                "resource_name": "social_funny"
+                "resource_name": "emoji_1f61c"
                 }
                 },
                 {
@@ -99,9 +99,9 @@
                              "Babyshower",
                              "Party"
                              ],
-                "unicode": "1F44F",
+                "unicode": "1f44f",
                 "expression_id": 5,
-                "resource_name": "celebrate_clap"
+                "resource_name": "emoji_1f44f"
                 }
                 }
                 ]

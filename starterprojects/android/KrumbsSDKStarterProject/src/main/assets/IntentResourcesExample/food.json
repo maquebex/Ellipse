@@ -15,9 +15,9 @@
           "Fitfam",
           "Eatclean"
         ],
-        "unicode": "1F351",
+        "unicode": "1f351",
         "expression_id": 4,
-        "resource_name": "healthy_food"
+        "resource_name": "emoji_1f351"
       }
     },
     {
@@ -35,9 +35,9 @@
           "Foodporn",
           "Unhealthyfood"
         ],
-        "unicode": "1F35F",
+        "unicode": "1f35f",
         "expression_id": 5,
-        "resource_name": "junk_food"
+        "resource_name": "emoji_1f35f"
       }
     },
     {
@@ -59,9 +59,9 @@
           "Sweettooth",
           "Dessertporn"
         ],
-        "unicode": "1F60B",
+        "unicode": "1f60b",
         "expression_id": 2,
-        "resource_name": "restaurant_tasty"
+        "resource_name": "emoji_1f60b"
       }
     },
     {
@@ -81,9 +81,9 @@
           "Drinkup",
           "Drunk"
         ],
-        "unicode": "1F379",
+        "unicode": "1f379",
         "expression_id": 3,
-        "resource_name": "restaurant_drinking"
+        "resource_name": "emoji_1f379"
       }
     },
     {
@@ -101,9 +101,9 @@
           "Donteatit",
           "Junk"
         ],
-        "unicode": "1F44E",
+        "unicode": "1f44e",
         "expression_id": 1,
-        "resource_name": "restaurant_dislike"
+        "resource_name": "emoji_1f44e"
       }
     }
   ]

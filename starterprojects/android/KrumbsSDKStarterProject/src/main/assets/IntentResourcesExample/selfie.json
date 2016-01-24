@@ -9,9 +9,9 @@
                              "Selfpotrait","Lovem",
                              "Whoneedsaselfiestick","Swagger"
                              ],
-                "unicode": "1F60D",
+                "unicode": "1f60d",
                 "expression_id": 1,
-                "resource_name": "love"
+                "resource_name": "emoji_1f60d"
                 }
                 },
                 {
@@ -27,9 +27,9 @@
                              "Health","Fitmom","Yoga","Running",
                              "Basketball","Fitspiration","Gym","Gymlife"
                              ],
-                "unicode": "1F4AA",
+                "unicode": "1f4aa",
                 "expression_id": 2,
-                "resource_name": "exercise"
+                "resource_name": "emoji_1f4aa"
                 }
                 },
                 {
@@ -38,9 +38,9 @@
                              "Having fun","Thecrew","Awesometime",
                              "Amazingfriends","Amazing","Swag"
                              ],
-                "unicode": "1F38A",
+                "unicode": "1f38a",
                 "expression_id": 3,
-                "resource_name": "having_fun"
+                "resource_name": "emoji_1f38a"
                 }
                 },
                 {
@@ -62,9 +62,9 @@
                              "Arrivederci",
                              "Sayonara"
                              ],
-                "unicode": "1F6A9",
+                "unicode": "1f6a9",
                 "expression_id": 4,
-                "resource_name": "arrived"
+                "resource_name": "emoji_1f6a9"
                 }
                 },
                 {
@@ -81,9 +81,9 @@
                              "Heartbroken",
                              "Bff"
                              ],
-                "unicode": "1F622",
+                "unicode": "1f622",
                 "expression_id": 5,
-                "resource_name": "selfi_missyou"
+                "resource_name": "emoji_1f622"
                 }
                 }
                 ]
