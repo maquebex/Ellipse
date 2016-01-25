@@ -6,10 +6,15 @@
 package io.krumbs.sdk.starter;
 
 import android.Manifest;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -80,6 +85,15 @@ public class MainActivity extends AppCompatActivity {
 
       }
     });
+    // SDK usage step 5 - Register a BroadcastReceiver on the LocalBroadcastManager, to receive media upload complete messages
+    final LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(getApplicationContext());
+    BroadcastReceiver sdkMessageReceiver = new BroadcastReceiver() {
+      @Override
+      public void onReceive(Context context, Intent intent) {
+
+      }
+    };
+    localBroadcastManager.registerReceiver(sdkMessageReceiver, new IntentFilter("io.krumbs.sdk.KCapture.MediaUpload"));
   }
 
   private void requestLocationPermission() {
