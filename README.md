@@ -23,4 +23,4 @@ It is expected that you are using Android Studio IDE and XCode 7 IDE to do your 
 
 ### Who do I talk to? ###
 
-* For issues send an email to krumbsteam@gmail.com or sdkgroup@krumbs.net
+* For issues send an email to krumbsteam at gmail.com or sdkgroup at krumbs.net
