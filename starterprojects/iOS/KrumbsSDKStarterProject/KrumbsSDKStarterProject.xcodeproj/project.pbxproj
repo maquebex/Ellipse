@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C98BF8CA1C5B2F8600575F85 /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */; };
+		C98BF8CB1C5B2FD800575F85 /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */; };
+		C98BF8CC1C5B2FD800575F85 /* KrumbsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C9AA9B391C2D101C00168219 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA9B371C2D101C00168219 /* LaunchScreen.storyboard */; };
 		C9D39D291C2BAF9A001A26D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D39D281C2BAF9A001A26D5 /* main.m */; };
 		C9D39D2C1C2BAF9A001A26D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D39D2B1C2BAF9A001A26D5 /* AppDelegate.m */; };
@@ -18,8 +21,6 @@
 		C9D39D6B1C2BB8F1001A26D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D39D6A1C2BB8F1001A26D5 /* UIKit.framework */; };
 		C9DE37961C5623240043E64B /* IntentResourcesExample.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9DE37951C5623240043E64B /* IntentResourcesExample.bundle */; };
 		C9DE37981C5624DE0043E64B /* IntentResourcesExample.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9DE37971C5624DE0043E64B /* IntentResourcesExample.xcassets */; };
-		C9FDA8881C5637CD00AA8652 /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */; };
-		C9FDA8891C5637CD00AA8652 /* KrumbsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C9FDA88A1C5637CD00AA8652 /* Embed Frameworks */ = {
+		C98BF8C81C5B2F1200575F85 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C9FDA8891C5637CD00AA8652 /* KrumbsSDK.framework in Embed Frameworks */,
+				C98BF8CC1C5B2FD800575F85 /* KrumbsSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
 		C9AA9B381C2D101C00168219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9D39D241C2BAF9A001A26D5 /* KrumbsSDKStarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrumbsSDKStarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D39D281C2BAF9A001A26D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -73,7 +75,6 @@
 		C9D39D6A1C2BB8F1001A26D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9DE37951C5623240043E64B /* IntentResourcesExample.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IntentResourcesExample.bundle; sourceTree = "<group>"; };
 		C9DE37971C5624DE0043E64B /* IntentResourcesExample.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IntentResourcesExample.xcassets; sourceTree = "<group>"; };
-		C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +83,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D39D6B1C2BB8F1001A26D5 /* UIKit.framework in Frameworks */,
-				C9FDA8881C5637CD00AA8652 /* KrumbsSDK.framework in Frameworks */,
+				C98BF8CA1C5B2F8600575F85 /* KrumbsSDK.framework in Frameworks */,
+				C98BF8CB1C5B2FD800575F85 /* KrumbsSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +108,6 @@
 		C9D39D1B1C2BAF9A001A26D5 = {
 			isa = PBXGroup;
 			children = (
-				C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */,
 				C9D39D6C1C2BB8FD001A26D5 /* Frameworks */,
 				C9D39D261C2BAF9A001A26D5 /* KrumbsSDKStarterProject */,
 				C9D39D401C2BAF9A001A26D5 /* KrumbsSDKStarterProjectTests */,
@@ -172,6 +173,7 @@
 		C9D39D6C1C2BB8FD001A26D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */,
 				C9D39D6A1C2BB8F1001A26D5 /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -187,7 +189,7 @@
 				C9D39D201C2BAF9A001A26D5 /* Sources */,
 				C9D39D211C2BAF9A001A26D5 /* Frameworks */,
 				C9D39D221C2BAF9A001A26D5 /* Resources */,
-				C9FDA88A1C5637CD00AA8652 /* Embed Frameworks */,
+				C98BF8C81C5B2F1200575F85 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,6 +383,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -400,6 +403,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -425,6 +429,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -437,6 +442,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
