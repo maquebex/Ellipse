@@ -1,6 +1,0 @@
-framework module KrumbsSDK {
-  umbrella header "KrumbsSDK.h"
-
-  export *
-  module * { export * }
-}
