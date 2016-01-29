@@ -1,84 +1,10 @@
 PODS:
-  - AFAmazonS3Manager (3.2.1):
-    - AFNetworking/NSURLConnection (~> 2.4)
-  - AFNetworking (2.6.3):
-    - AFNetworking/NSURLConnection (= 2.6.3)
-    - AFNetworking/NSURLSession (= 2.6.3)
-    - AFNetworking/Reachability (= 2.6.3)
-    - AFNetworking/Security (= 2.6.3)
-    - AFNetworking/Serialization (= 2.6.3)
-    - AFNetworking/UIKit (= 2.6.3)
-  - AFNetworking/NSURLConnection (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.3)
-  - AFNetworking/Security (2.6.3)
-  - AFNetworking/Serialization (2.6.3)
-  - AFNetworking/UIKit (2.6.3):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-  - APTimeZones (1.1)
-  - Bolts/Tasks (1.6.0)
-  - CircleProgressBar (0.22)
-  - FontAwesomeKit (2.2.0):
-    - FontAwesomeKit/Core (= 2.2.0)
-    - FontAwesomeKit/FontAwesome (= 2.2.0)
-    - FontAwesomeKit/FoundationIcons (= 2.2.0)
-    - FontAwesomeKit/IonIcons (= 2.2.0)
-    - FontAwesomeKit/Zocial (= 2.2.0)
-  - FontAwesomeKit/Core (2.2.0)
-  - FontAwesomeKit/FontAwesome (2.2.0):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/FoundationIcons (2.2.0):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/IonIcons (2.2.0):
-    - FontAwesomeKit/Core
-  - FontAwesomeKit/Zocial (2.2.0):
-    - FontAwesomeKit/Core
-  - JFOpenWeatherMapManager (1.0.0):
-    - AFNetworking
-    - APTimeZones
-  - KrumbsSDK (1.0.0):
-    - AFAmazonS3Manager (~> 3.2.1)
-    - AFNetworking (~> 2.3)
-    - AFNetworking/NSURLConnection (~> 2.4)
-    - CircleProgressBar
-    - FontAwesomeKit (~> 2.2.0)
-    - JFOpenWeatherMapManager (~> 1.0.0)
-    - MagicalRecord
-    - Mixpanel
-    - Parse
-    - SCScrollView (~> 1.1)
-  - MagicalRecord (2.3.2):
-    - MagicalRecord/Core (= 2.3.2)
-  - MagicalRecord/Core (2.3.2)
-  - Mixpanel (2.9.2):
-    - Mixpanel/Mixpanel (= 2.9.2)
-  - Mixpanel/Mixpanel (2.9.2)
-  - Parse (1.12.0):
-    - Bolts/Tasks (~> 1.5)
-  - SCScrollView (1.1.7)
+  - KrumbsSDK (1.0.1)
 
 DEPENDENCIES:
-  - KrumbsSDK (~> 1.0.0)
+  - KrumbsSDK (~> 1.0.1)
 
 SPEC CHECKSUMS:
-  AFAmazonS3Manager: 688f9238511bb86011159d0155fcda09838b0e0d
-  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  APTimeZones: ddb9aca50fff41d6313eb29d86d37b1edf9d2942
-  Bolts: f52a250053bb517ca874523c3913776359ab3def
-  CircleProgressBar: bb6418f9a5121f64c5784b9a72e34f353727266c
-  FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  JFOpenWeatherMapManager: b8a3d2a14a60cb865a5a5a3a22fdf00b653d1848
-  KrumbsSDK: 59c23f4e49d1f94c0c086de313e257310155528e
-  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
-  Mixpanel: 62a6b9904e97d5d3043c12a062deb408b2b9755f
-  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
-  SCScrollView: 59e93b7f230e7ee3c963f06dd0c67b57b8b9e237
+  KrumbsSDK: e103ea689bfbd2689875eda6711b24a7b604e54d
 
 COCOAPODS: 0.39.0

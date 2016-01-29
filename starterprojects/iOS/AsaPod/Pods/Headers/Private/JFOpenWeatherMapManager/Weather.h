@@ -1,1 +1,0 @@
-../../../JFOpenWeatherMapManager/Weather.h

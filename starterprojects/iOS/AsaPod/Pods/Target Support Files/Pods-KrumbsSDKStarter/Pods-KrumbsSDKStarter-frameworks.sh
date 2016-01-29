@@ -84,30 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-KrumbsSDKStarter/AFAmazonS3Manager.framework"
-  install_framework "Pods-KrumbsSDKStarter/AFNetworking.framework"
-  install_framework "Pods-KrumbsSDKStarter/APTimeZones.framework"
-  install_framework "Pods-KrumbsSDKStarter/Bolts.framework"
-  install_framework "Pods-KrumbsSDKStarter/CircleProgressBar.framework"
-  install_framework "Pods-KrumbsSDKStarter/FontAwesomeKit.framework"
-  install_framework "Pods-KrumbsSDKStarter/JFOpenWeatherMapManager.framework"
   install_framework "${PODS_ROOT}/KrumbsSDK/KrumbsSDK.framework"
-  install_framework "Pods-KrumbsSDKStarter/MagicalRecord.framework"
-  install_framework "Pods-KrumbsSDKStarter/Mixpanel.framework"
-  install_framework "Pods-KrumbsSDKStarter/Parse.framework"
-  install_framework "Pods-KrumbsSDKStarter/SCScrollView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-KrumbsSDKStarter/AFAmazonS3Manager.framework"
-  install_framework "Pods-KrumbsSDKStarter/AFNetworking.framework"
-  install_framework "Pods-KrumbsSDKStarter/APTimeZones.framework"
-  install_framework "Pods-KrumbsSDKStarter/Bolts.framework"
-  install_framework "Pods-KrumbsSDKStarter/CircleProgressBar.framework"
-  install_framework "Pods-KrumbsSDKStarter/FontAwesomeKit.framework"
-  install_framework "Pods-KrumbsSDKStarter/JFOpenWeatherMapManager.framework"
   install_framework "${PODS_ROOT}/KrumbsSDK/KrumbsSDK.framework"
-  install_framework "Pods-KrumbsSDKStarter/MagicalRecord.framework"
-  install_framework "Pods-KrumbsSDKStarter/Mixpanel.framework"
-  install_framework "Pods-KrumbsSDKStarter/Parse.framework"
-  install_framework "Pods-KrumbsSDKStarter/SCScrollView.framework"
 fi

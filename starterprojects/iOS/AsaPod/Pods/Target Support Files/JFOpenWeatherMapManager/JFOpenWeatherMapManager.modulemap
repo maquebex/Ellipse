@@ -1,6 +1,0 @@
-framework module JFOpenWeatherMapManager {
-  umbrella header "JFOpenWeatherMapManager-umbrella.h"
-
-  export *
-  module * { export * }
-}

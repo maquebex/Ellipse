@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BAF9501D99FFD09C792E60C1'
+               BlueprintIdentifier = '40E80CA6A89FCC1DDEAAC1C2'
                BlueprintName = 'Pods-KrumbsSDKStarter'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_KrumbsSDKStarter.framework'>
