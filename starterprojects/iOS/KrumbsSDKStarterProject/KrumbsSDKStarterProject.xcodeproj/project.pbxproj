@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0FA8769E1BDB1089FEA6723 /* Pods_KrumbsSDKStarterProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45761E5DF08055CBD9189F1 /* Pods_KrumbsSDKStarterProject.framework */; };
+		C98BF8CA1C5B2F8600575F85 /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */; };
 		C9AA9B391C2D101C00168219 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA9B371C2D101C00168219 /* LaunchScreen.storyboard */; };
 		C9D39D291C2BAF9A001A26D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D39D281C2BAF9A001A26D5 /* main.m */; };
 		C9D39D2C1C2BAF9A001A26D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D39D2B1C2BAF9A001A26D5 /* AppDelegate.m */; };
@@ -18,8 +20,6 @@
 		C9D39D6B1C2BB8F1001A26D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D39D6A1C2BB8F1001A26D5 /* UIKit.framework */; };
 		C9DE37961C5623240043E64B /* IntentResourcesExample.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9DE37951C5623240043E64B /* IntentResourcesExample.bundle */; };
 		C9DE37981C5624DE0043E64B /* IntentResourcesExample.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9DE37971C5624DE0043E64B /* IntentResourcesExample.xcassets */; };
-		C9FDA8881C5637CD00AA8652 /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */; };
-		C9FDA8891C5637CD00AA8652 /* KrumbsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C9FDA88A1C5637CD00AA8652 /* Embed Frameworks */ = {
+		C98BF8C81C5B2F1200575F85 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C9FDA8891C5637CD00AA8652 /* KrumbsSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +53,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3F0BC53E51A16A00F8AC77BD /* Pods-KrumbsSDKStarterProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrumbsSDKStarterProject.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject.release.xcconfig"; sourceTree = "<group>"; };
+		99A3688521D2FAC4631BC8AB /* Pods-KrumbsSDKStarterProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrumbsSDKStarterProject.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject.debug.xcconfig"; sourceTree = "<group>"; };
+		C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KrumbsSDK.framework; path = "/Volumes/UsersHD/Users/asquithbailey/sandbox/krumbsdev/krumbs-sdk-samples/starterprojects/iOS/KrumbsSDKStarterProject/KrumbsSDK.framework"; sourceTree = "<absolute>"; };
 		C9AA9B381C2D101C00168219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9D39D241C2BAF9A001A26D5 /* KrumbsSDKStarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrumbsSDKStarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D39D281C2BAF9A001A26D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -73,7 +75,7 @@
 		C9D39D6A1C2BB8F1001A26D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9DE37951C5623240043E64B /* IntentResourcesExample.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IntentResourcesExample.bundle; sourceTree = "<group>"; };
 		C9DE37971C5624DE0043E64B /* IntentResourcesExample.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = IntentResourcesExample.xcassets; sourceTree = "<group>"; };
-		C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KrumbsSDK.framework; sourceTree = "<group>"; };
+		F45761E5DF08055CBD9189F1 /* Pods_KrumbsSDKStarterProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KrumbsSDKStarterProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D39D6B1C2BB8F1001A26D5 /* UIKit.framework in Frameworks */,
-				C9FDA8881C5637CD00AA8652 /* KrumbsSDK.framework in Frameworks */,
+				C98BF8CA1C5B2F8600575F85 /* KrumbsSDK.framework in Frameworks */,
+				A0FA8769E1BDB1089FEA6723 /* Pods_KrumbsSDKStarterProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,15 +106,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C5B6D826208956F638A78FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99A3688521D2FAC4631BC8AB /* Pods-KrumbsSDKStarterProject.debug.xcconfig */,
+				3F0BC53E51A16A00F8AC77BD /* Pods-KrumbsSDKStarterProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C9D39D1B1C2BAF9A001A26D5 = {
 			isa = PBXGroup;
 			children = (
-				C9FDA8871C5637CD00AA8652 /* KrumbsSDK.framework */,
 				C9D39D6C1C2BB8FD001A26D5 /* Frameworks */,
 				C9D39D261C2BAF9A001A26D5 /* KrumbsSDKStarterProject */,
 				C9D39D401C2BAF9A001A26D5 /* KrumbsSDKStarterProjectTests */,
 				C9D39D4B1C2BAF9A001A26D5 /* KrumbsSDKStarterProjectUITests */,
 				C9D39D251C2BAF9A001A26D5 /* Products */,
+				6C5B6D826208956F638A78FF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				C9D39D6A1C2BB8F1001A26D5 /* UIKit.framework */,
+				F45761E5DF08055CBD9189F1 /* Pods_KrumbsSDKStarterProject.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -184,10 +197,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9D39D511C2BAF9A001A26D5 /* Build configuration list for PBXNativeTarget "KrumbsSDKStarterProject" */;
 			buildPhases = (
+				C14984DA996D6281DABDA32D /* Check Pods Manifest.lock */,
 				C9D39D201C2BAF9A001A26D5 /* Sources */,
 				C9D39D211C2BAF9A001A26D5 /* Frameworks */,
 				C9D39D221C2BAF9A001A26D5 /* Resources */,
-				C9FDA88A1C5637CD00AA8652 /* Embed Frameworks */,
+				C98BF8C81C5B2F1200575F85 /* Embed Frameworks */,
+				FC3599A273BDA1D08A6E5F41 /* Embed Pods Frameworks */,
+				F304F73D81432FC76ECCC630 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,6 +321,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C14984DA996D6281DABDA32D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F304F73D81432FC76ECCC630 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC3599A273BDA1D08A6E5F41 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9D39D201C2BAF9A001A26D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -381,6 +445,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -400,6 +465,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -425,6 +491,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -437,12 +504,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		C9D39D521C2BAF9A001A26D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99A3688521D2FAC4631BC8AB /* Pods-KrumbsSDKStarterProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
@@ -460,6 +529,7 @@
 		};
 		C9D39D531C2BAF9A001A26D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F0BC53E51A16A00F8AC77BD /* Pods-KrumbsSDKStarterProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;

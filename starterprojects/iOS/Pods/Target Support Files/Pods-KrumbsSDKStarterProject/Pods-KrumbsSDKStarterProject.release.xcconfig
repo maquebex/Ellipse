@@ -1,0 +1,8 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/KrumbsSDK"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/KrumbsSDK"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited)  -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/KrumbsSDK"
+OTHER_LDFLAGS = $(inherited) -framework "AssetsLibrary" -framework "CoreData" -framework "CoreImage" -framework "CoreLocation" -framework "EventKit" -framework "Foundation" -framework "ImageIO" -framework "KrumbsSDK" -framework "MobileCoreServices" -framework "Photos" -framework "UIKit"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-KrumbsSDKStarterProject
+PODS_ROOT = ${SRCROOT}/../Pods

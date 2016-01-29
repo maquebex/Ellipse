@@ -1,0 +1,6 @@
+framework module Pods_KrumbsSDKStarterProject {
+  umbrella header "Pods-KrumbsSDKStarterProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

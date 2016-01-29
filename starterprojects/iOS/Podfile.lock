@@ -1,0 +1,10 @@
+PODS:
+  - KrumbsSDK (1.0.1)
+
+DEPENDENCIES:
+  - KrumbsSDK (~> 1.0.1)
+
+SPEC CHECKSUMS:
+  KrumbsSDK: e103ea689bfbd2689875eda6711b24a7b604e54d
+
+COCOAPODS: 0.39.0

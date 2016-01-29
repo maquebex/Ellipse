@@ -1,0 +1,1 @@
+../../../../KrumbsSDK/KrumbsSDK.framework/Headers/KrumbsUserInfo.h
