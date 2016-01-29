@@ -1,0 +1,18 @@
+source 'https://bitbucket.org/krumbsteam/sdkpodspecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+xcodeproj 'KrumbsSDKStarter/KrumbsSDKStarter.xcodeproj'
+
+use_frameworks!
+
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'KrumbsSDKStarter' do
+  pod 'KrumbsSDK' , '~> 1.0.0'
+end
+
+target 'KrumbsSDKStarterUITests' do
+
+end
+
