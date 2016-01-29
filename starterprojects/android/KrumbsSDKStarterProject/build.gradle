@@ -22,7 +22,7 @@ android {
         exclude 'META-INF/LICENSE' // will not include LICENSE file
     }
 }
-dependencies {
 
-    compile 'io.krumbs.sdk:krumbs-sdk:1.0.4.1-SNAPSHOT'
+dependencies {
+    compile 'io.krumbs.sdk:krumbs-sdk:1.0.4.2-SNAPSHOT'
 }
