@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		AizNGZkEyD98Ok80R25U9492Lb4=
+		CT+sNtNko+5ZtTOKJycssCTgGqQ=
 		</data>
 		<key>FontAwesome.otf</key>
 		<data>
@@ -34,23 +34,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Uhwflen7bJc/hhPbxZGcYWEfAvc=
+		NGZrJhjXkwaSQIaRmBIPY5FGuNc=
 		</data>
 		<key>KCapturePreviewViewController.nib</key>
 		<data>
-		kEi4RFmmmy5cFZnVMJT38rIrlG0=
+		5z5IExak8nUA3sVqkYPKonjDW04=
 		</data>
 		<key>KCaptureViewController.nib</key>
 		<data>
-		260ZBOIhLASVd9u/QVDlPAMjm8A=
+		1dg9BRsQWbZ2mm5Fx3iQUONz5PI=
 		</data>
 		<key>KRMIntentCollectionViewCell.nib</key>
 		<data>
-		0mrqGkI6/YMxf0oyebLa7PPTRh0=
+		0oruueFholbY4Sombr7hZ/nlLAE=
 		</data>
 		<key>KSmartMessageCollectionViewCell.nib</key>
 		<data>
-		XcNSdEcxPA3UbREGC1AEr6OPCwc=
+		mMAQwy6O5ZrR/nWugCjYLIx0PTw=
 		</data>
 		<key>KrumbsConfig.plist</key>
 		<data>
@@ -84,93 +84,9 @@
 		<data>
 		iZGOSqOcv2tTHElLge6xKCbi9q8=
 		</data>
-		<key>MPArrowLeft.png</key>
+		<key>KrumbsSDK.podspec</key>
 		<data>
-		z3MFTX24madk18oUsQlUcF63P5s=
-		</data>
-		<key>MPArrowLeft@2x.png</key>
-		<data>
-		pgCTH5frThFhY9zy48vh/y+9umM=
-		</data>
-		<key>MPArrowRight.png</key>
-		<data>
-		Ac9D3xUvoo9ND5UD033HClG2Src=
-		</data>
-		<key>MPArrowRight@2x.png</key>
-		<data>
-		L7R8ElFUi0TkEm3ZLzr+2MZP0MM=
-		</data>
-		<key>MPCheckmark.png</key>
-		<data>
-		6sXKLU9W4GspGMKQgusB1/lEzQo=
-		</data>
-		<key>MPCheckmark@2x.png</key>
-		<data>
-		1jhNECH5ZyzkthQiy7OfPVfTLfE=
-		</data>
-		<key>MPCloseBtn.png</key>
-		<data>
-		uZeugV+AyOXLdcwgCfIvu2liCBw=
-		</data>
-		<key>MPCloseBtn@2x.png</key>
-		<data>
-		7KSl26+/dYe3xn7kdYUp4GgtMFk=
-		</data>
-		<key>MPDismissKeyboard.png</key>
-		<data>
-		uq46d9ExmusPvpzwIMwRG9z/sPU=
-		</data>
-		<key>MPDismissKeyboard@2x.png</key>
-		<data>
-		5DZbgLTnEzXljxxJ0xbQSmnRJcA=
-		</data>
-		<key>MPLogo.png</key>
-		<data>
-		pvYPhn3R64eRRyo83eZWj/AM4q8=
-		</data>
-		<key>MPLogo@2x.png</key>
-		<data>
-		hOU2E5r4Oep0u5G3l2uCoNMR/Cw=
-		</data>
-		<key>MPNotification.storyboardc/Info.plist</key>
-		<data>
-		capiHG+Ge67eYJ1+M+dfJv4ijrw=
-		</data>
-		<key>MPNotification.storyboardc/MPNotificationViewController.nib</key>
-		<data>
-		cqTWpe9Z+7xkVLZe/SFDRLvHHNE=
-		</data>
-		<key>MPNotification.storyboardc/puo-Hy-QiQ-view-Wch-Xc-Avw.nib</key>
-		<data>
-		6sPArbJOPtN2mOmBlctwzJAhz2s=
-		</data>
-		<key>MPSurvey.storyboardc/Info.plist</key>
-		<data>
-		kpww18oQeAayknALsApjv+Pwsns=
-		</data>
-		<key>MPSurvey.storyboardc/MPSurveyMultipleChoiceQuestionViewController.nib</key>
-		<data>
-		P2YWfqWrwh0kMoLMBbv9UdlmcWA=
-		</data>
-		<key>MPSurvey.storyboardc/MPSurveyNavigationController.nib</key>
-		<data>
-		n8MTMBlOWGQIJycnqj21JyJoDAU=
-		</data>
-		<key>MPSurvey.storyboardc/MPSurveyTextQuestionViewController.nib</key>
-		<data>
-		5EiOQ5la8M3JU3McuAHKBoFtRpQ=
-		</data>
-		<key>MPSurvey.storyboardc/RIP-po-dgx-view-cp6-lZ-a9t.nib</key>
-		<data>
-		Bir00ppveA4Yvv+8IRC5FXtce30=
-		</data>
-		<key>MPSurvey.storyboardc/V5X-Ik-MvF-view-dcL-M9-gG3.nib</key>
-		<data>
-		EKmXwObbsKfLhFZytz3Ewrh83/M=
-		</data>
-		<key>MPSurvey.storyboardc/tDf-fb-udT-view-LG7-cL-aRp.nib</key>
-		<data>
-		AUkdcV400jgn4jyocR4yFk2AFrA=
+		kDp/uuWoz0yBBrMEkSiyfi+7Bdg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -185,28 +101,16 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>foundation-icons.ttf</key>
-		<data>
-		SyvObHkkk6SlcWtv7C2+/olJLD8=
-		</data>
-		<key>ionicons.ttf</key>
-		<data>
-		p/cp7cRiQYLEJ0tA7IP1JEWZeO0=
-		</data>
 		<key>timezonesDB.json</key>
 		<data>
 		KrClsVzzIecENOR3IlnTdnxJ5/U=
-		</data>
-		<key>zocial-regular-webfont.ttf</key>
-		<data>
-		sOFzyS6gcipJRPXzp2EpmWCjkq0=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		AizNGZkEyD98Ok80R25U9492Lb4=
+		CT+sNtNko+5ZtTOKJycssCTgGqQ=
 		</data>
 		<key>FontAwesome.otf</key>
 		<data>
@@ -234,19 +138,19 @@
 		</data>
 		<key>KCapturePreviewViewController.nib</key>
 		<data>
-		kEi4RFmmmy5cFZnVMJT38rIrlG0=
+		5z5IExak8nUA3sVqkYPKonjDW04=
 		</data>
 		<key>KCaptureViewController.nib</key>
 		<data>
-		260ZBOIhLASVd9u/QVDlPAMjm8A=
+		1dg9BRsQWbZ2mm5Fx3iQUONz5PI=
 		</data>
 		<key>KRMIntentCollectionViewCell.nib</key>
 		<data>
-		0mrqGkI6/YMxf0oyebLa7PPTRh0=
+		0oruueFholbY4Sombr7hZ/nlLAE=
 		</data>
 		<key>KSmartMessageCollectionViewCell.nib</key>
 		<data>
-		XcNSdEcxPA3UbREGC1AEr6OPCwc=
+		mMAQwy6O5ZrR/nWugCjYLIx0PTw=
 		</data>
 		<key>KrumbsConfig.plist</key>
 		<data>
@@ -280,93 +184,9 @@
 		<data>
 		iZGOSqOcv2tTHElLge6xKCbi9q8=
 		</data>
-		<key>MPArrowLeft.png</key>
+		<key>KrumbsSDK.podspec</key>
 		<data>
-		z3MFTX24madk18oUsQlUcF63P5s=
-		</data>
-		<key>MPArrowLeft@2x.png</key>
-		<data>
-		pgCTH5frThFhY9zy48vh/y+9umM=
-		</data>
-		<key>MPArrowRight.png</key>
-		<data>
-		Ac9D3xUvoo9ND5UD033HClG2Src=
-		</data>
-		<key>MPArrowRight@2x.png</key>
-		<data>
-		L7R8ElFUi0TkEm3ZLzr+2MZP0MM=
-		</data>
-		<key>MPCheckmark.png</key>
-		<data>
-		6sXKLU9W4GspGMKQgusB1/lEzQo=
-		</data>
-		<key>MPCheckmark@2x.png</key>
-		<data>
-		1jhNECH5ZyzkthQiy7OfPVfTLfE=
-		</data>
-		<key>MPCloseBtn.png</key>
-		<data>
-		uZeugV+AyOXLdcwgCfIvu2liCBw=
-		</data>
-		<key>MPCloseBtn@2x.png</key>
-		<data>
-		7KSl26+/dYe3xn7kdYUp4GgtMFk=
-		</data>
-		<key>MPDismissKeyboard.png</key>
-		<data>
-		uq46d9ExmusPvpzwIMwRG9z/sPU=
-		</data>
-		<key>MPDismissKeyboard@2x.png</key>
-		<data>
-		5DZbgLTnEzXljxxJ0xbQSmnRJcA=
-		</data>
-		<key>MPLogo.png</key>
-		<data>
-		pvYPhn3R64eRRyo83eZWj/AM4q8=
-		</data>
-		<key>MPLogo@2x.png</key>
-		<data>
-		hOU2E5r4Oep0u5G3l2uCoNMR/Cw=
-		</data>
-		<key>MPNotification.storyboardc/Info.plist</key>
-		<data>
-		capiHG+Ge67eYJ1+M+dfJv4ijrw=
-		</data>
-		<key>MPNotification.storyboardc/MPNotificationViewController.nib</key>
-		<data>
-		cqTWpe9Z+7xkVLZe/SFDRLvHHNE=
-		</data>
-		<key>MPNotification.storyboardc/puo-Hy-QiQ-view-Wch-Xc-Avw.nib</key>
-		<data>
-		6sPArbJOPtN2mOmBlctwzJAhz2s=
-		</data>
-		<key>MPSurvey.storyboardc/Info.plist</key>
-		<data>
-		kpww18oQeAayknALsApjv+Pwsns=
-		</data>
-		<key>MPSurvey.storyboardc/MPSurveyMultipleChoiceQuestionViewController.nib</key>
-		<data>
-		P2YWfqWrwh0kMoLMBbv9UdlmcWA=
-		</data>
-		<key>MPSurvey.storyboardc/MPSurveyNavigationController.nib</key>
-		<data>
-		n8MTMBlOWGQIJycnqj21JyJoDAU=
-		</data>
-		<key>MPSurvey.storyboardc/MPSurveyTextQuestionViewController.nib</key>
-		<data>
-		5EiOQ5la8M3JU3McuAHKBoFtRpQ=
-		</data>
-		<key>MPSurvey.storyboardc/RIP-po-dgx-view-cp6-lZ-a9t.nib</key>
-		<data>
-		Bir00ppveA4Yvv+8IRC5FXtce30=
-		</data>
-		<key>MPSurvey.storyboardc/V5X-Ik-MvF-view-dcL-M9-gG3.nib</key>
-		<data>
-		EKmXwObbsKfLhFZytz3Ewrh83/M=
-		</data>
-		<key>MPSurvey.storyboardc/tDf-fb-udT-view-LG7-cL-aRp.nib</key>
-		<data>
-		AUkdcV400jgn4jyocR4yFk2AFrA=
+		kDp/uuWoz0yBBrMEkSiyfi+7Bdg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -381,21 +201,9 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>foundation-icons.ttf</key>
-		<data>
-		SyvObHkkk6SlcWtv7C2+/olJLD8=
-		</data>
-		<key>ionicons.ttf</key>
-		<data>
-		p/cp7cRiQYLEJ0tA7IP1JEWZeO0=
-		</data>
 		<key>timezonesDB.json</key>
 		<data>
 		KrClsVzzIecENOR3IlnTdnxJ5/U=
-		</data>
-		<key>zocial-regular-webfont.ttf</key>
-		<data>
-		sOFzyS6gcipJRPXzp2EpmWCjkq0=
 		</data>
 	</dict>
 	<key>rules</key>
