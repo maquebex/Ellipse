@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 // The mediaJSON url for your capture
                 String mediaJSONUrl = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_JSON_URL);
+                Log.i("KRUMBS-CALLBACK", mediaJSONUrl + ", " + imagePath);
                 cameraView.setVisibility(View.INVISIBLE);
                 startCaptureButton.setVisibility(View.VISIBLE);
                 helloText.setVisibility(View.VISIBLE);
