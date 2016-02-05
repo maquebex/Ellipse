@@ -16,10 +16,10 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewManager;
 
 import java.util.Map;
 
@@ -55,50 +55,75 @@ public class MainActivity extends AppCompatActivity {
           startCaptureButton.setVisibility(View.INVISIBLE);
           helloText.setVisibility(View.INVISIBLE);
           cameraView.setVisibility(View.VISIBLE);
-          startCamera();
+          startCapture();
         }
       }
     });
   }
 
 
-  private void startCamera() {
+  private void startCapture() {
     int containerId = R.id.camera_container;
 // SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
     KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
-      @Override
-      public void captureCompleted(CompletionState completionState, boolean audioCaptured, Map<String, Object> map) {
-        if(completionState == CompletionState.CAPTURE_SUCCESS) {
+        @Override
+        public void captureCompleted(CompletionState completionState, boolean audioCaptured, Map<String, Object> map) {
+            if (completionState == CompletionState.CAPTURE_SUCCESS) {
 // The local image url for your capture
-          String imagePath = (String)map.get(KCaptureCompleteListener.CAPTURE_MEDIA_IMAGE_PATH);
-          if(audioCaptured) {
+                String imagePath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_IMAGE_PATH);
+                if (audioCaptured) {
 // The local audio url for your capture (if user decided to record audio)
-            String audioPath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_AUDIO_PATH);
-          }
+                    String audioPath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_AUDIO_PATH);
+                }
 // The mediaJSON url for your capture
-          String mediaJSONUrl =  (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_JSON_URL);
-          cameraView.setVisibility(View.INVISIBLE);
-          startCaptureButton.setVisibility(View.VISIBLE);
-          helloText.setVisibility(View.VISIBLE);
-
+                String mediaJSONUrl = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_JSON_URL);
+                cameraView.setVisibility(View.INVISIBLE);
+                startCaptureButton.setVisibility(View.VISIBLE);
+                helloText.setVisibility(View.VISIBLE);
+            } else if ( completionState == CompletionState.CAPTURE_CANCELLED ||
+                    completionState == CompletionState.SDK_NOT_INITIALIZED ) {
+                cameraView.setVisibility(View.INVISIBLE);
+                startCaptureButton.setVisibility(View.VISIBLE);
+                helloText.setVisibility(View.VISIBLE);
+            }
         }
-
-      }
     });
-    // SDK usage step 5 - Register a BroadcastReceiver on the LocalBroadcastManager, to receive media upload complete messages
-    final LocalBroadcastManager localBroadcastManager = LocalBroadcastManager.getInstance(getApplicationContext());
-    BroadcastReceiver sdkMessageReceiver = new BroadcastReceiver() {
-      @Override
-      public void onReceive(Context context, Intent intent) {
-
-      }
-    };
-    localBroadcastManager.registerReceiver(sdkMessageReceiver, new IntentFilter("io.krumbs.sdk.KCapture.MediaUpload"));
   }
 
   private void requestLocationPermission() {
     ActivityCompat.requestPermissions(this, PERMISSIONS_LOCATION, REQUEST_LOCATION);
   }
+    // SDK usage step 5.1; Define a Broadcast Receiver which is going to receive messages from the SDK
+    private static BroadcastReceiver sdkMessageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String status = intent.getStringExtra(KCaptureCompleteListener.CAPTURE_MEDIA_UPLOAD_STATUS);
+            if (status != null) {
+                Log.i("KRUMBS-BROADCAST-RECV", status.toString());
+                String mediaType = intent.getStringExtra(KCaptureCompleteListener.CAPTURE_MEDIA_TYPE);
+                String mediaUrl = intent.getStringExtra(KCaptureCompleteListener.CAPTURE_MEDIA_URL);
+                if (mediaType!= null && mediaUrl!= null) {
+                    Log.i("KRUMBS-BROADCAST-RECV", mediaType + ": " + mediaUrl);
+                }
+            }
+        }
+    };
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        SDK usage step 5.2 - Register the BroadcastReceiver on the LocalBroadcastManager
+        LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(
+                sdkMessageReceiver,
+                new IntentFilter(KCaptureCompleteListener.CAPTURE_MEDIA_UPLOAD_ACTION));
+    }
+
+    @Override
+    protected void onPause() {
+        //        SDK usage step 5.3 - UnRegister the BroadcastReceiver
+        LocalBroadcastManager.getInstance(getApplicationContext()).unregisterReceiver(
+                sdkMessageReceiver);
+        super.onPause();
+    }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
