@@ -6,15 +6,10 @@
 package io.krumbs.sdk.starter;
 
 import android.Manifest;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -43,21 +38,21 @@ public class MainActivity extends AppCompatActivity {
     helloText = findViewById(R.id.hello_world);
     cameraView = findViewById(R.id.camera_container);
     startCaptureButton.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View view) {
+        @Override
+        public void onClick(View view) {
 //        NavUtils.navigateUpFromSameTask(MainActivity.this);
-        if (ContextCompat.checkSelfPermission(MainActivity.this,
-                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                || ContextCompat.checkSelfPermission(MainActivity.this,
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-          requestLocationPermission();
-        } else {
-          startCaptureButton.setVisibility(View.INVISIBLE);
-          helloText.setVisibility(View.INVISIBLE);
-          cameraView.setVisibility(View.VISIBLE);
-          startCapture();
+            if (ContextCompat.checkSelfPermission(MainActivity.this,
+                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                    || ContextCompat.checkSelfPermission(MainActivity.this,
+                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                requestLocationPermission();
+            } else {
+                startCaptureButton.setVisibility(View.INVISIBLE);
+                helloText.setVisibility(View.INVISIBLE);
+                cameraView.setVisibility(View.VISIBLE);
+                startCapture();
+            }
         }
-      }
     });
   }
 
@@ -68,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
     KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
         @Override
         public void captureCompleted(CompletionState completionState, boolean audioCaptured, Map<String, Object> map) {
+            // DEBUG LOG
+            if (completionState != null) {
+                Log.d("KRUMBS-CALLBACK", completionState.toString());
+            }
             if (completionState == CompletionState.CAPTURE_SUCCESS) {
 // The local image url for your capture
                 String imagePath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_IMAGE_PATH);
@@ -81,8 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 cameraView.setVisibility(View.INVISIBLE);
                 startCaptureButton.setVisibility(View.VISIBLE);
                 helloText.setVisibility(View.VISIBLE);
-            } else if ( completionState == CompletionState.CAPTURE_CANCELLED ||
-                    completionState == CompletionState.SDK_NOT_INITIALIZED ) {
+            } else if (completionState == CompletionState.CAPTURE_CANCELLED ||
+                    completionState == CompletionState.SDK_NOT_INITIALIZED) {
                 cameraView.setVisibility(View.INVISIBLE);
                 startCaptureButton.setVisibility(View.VISIBLE);
                 helloText.setVisibility(View.VISIBLE);
@@ -91,40 +90,9 @@ public class MainActivity extends AppCompatActivity {
     });
   }
 
-  private void requestLocationPermission() {
+    private void requestLocationPermission() {
     ActivityCompat.requestPermissions(this, PERMISSIONS_LOCATION, REQUEST_LOCATION);
   }
-    // SDK usage step 5.1; Define a Broadcast Receiver which is going to receive messages from the SDK
-    private static BroadcastReceiver sdkMessageReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String status = intent.getStringExtra(KCaptureCompleteListener.CAPTURE_MEDIA_UPLOAD_STATUS);
-            if (status != null) {
-                Log.i("KRUMBS-BROADCAST-RECV", status.toString());
-                String mediaType = intent.getStringExtra(KCaptureCompleteListener.CAPTURE_MEDIA_TYPE);
-                String mediaUrl = intent.getStringExtra(KCaptureCompleteListener.CAPTURE_MEDIA_URL);
-                if (mediaType!= null && mediaUrl!= null) {
-                    Log.i("KRUMBS-BROADCAST-RECV", mediaType + ": " + mediaUrl);
-                }
-            }
-        }
-    };
-    @Override
-    protected void onResume() {
-        super.onResume();
-//        SDK usage step 5.2 - Register the BroadcastReceiver on the LocalBroadcastManager
-        LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(
-                sdkMessageReceiver,
-                new IntentFilter(KCaptureCompleteListener.CAPTURE_MEDIA_UPLOAD_ACTION));
-    }
-
-    @Override
-    protected void onPause() {
-        //        SDK usage step 5.3 - UnRegister the BroadcastReceiver
-        LocalBroadcastManager.getInstance(getApplicationContext()).unregisterReceiver(
-                sdkMessageReceiver);
-        super.onPause();
-    }
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {

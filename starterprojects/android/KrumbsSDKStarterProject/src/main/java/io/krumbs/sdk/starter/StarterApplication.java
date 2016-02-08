@@ -10,11 +10,16 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.util.Log;
 
+
+import java.net.URL;
 
 import io.krumbs.sdk.KIntentPanelConfiguration;
 import io.krumbs.sdk.KrumbsSDK;
 import io.krumbs.sdk.KrumbsUser;
+import io.krumbs.sdk.data.model.Media;
+import io.krumbs.sdk.krumbscapture.KCaptureMessageReceiver;
 
 
 public class StarterApplication extends Application {
@@ -31,7 +36,10 @@ public class StarterApplication extends Application {
         String clientKey = getMetadata(getApplicationContext(), KRUMBS_SDK_CLIENT_KEY);
         if (appID != null && clientKey != null) {
 // SDK usage step 1 - initialize the SDK with your application id and client key
-            KrumbsSDK.initialize(getApplicationContext(), appID, clientKey);
+// and an object that implements KCaptureMessageReceiver.
+// KCaptureMessageReceiver will be used to listen for various messages from the SDK
+// see below for an implementation
+            KrumbsSDK.initialize(this, appID, clientKey, kCaptureMessageReceiver);
 
             try {
 
@@ -85,9 +93,24 @@ public class StarterApplication extends Application {
         } catch (PackageManager.NameNotFoundException e) {
 // if we can’t find it in the manifest, just return null
         }
-
         return null;
     }
 
-
+    KCaptureMessageReceiver kCaptureMessageReceiver = new KCaptureMessageReceiver() {
+        // SDK usage step 1.1:
+        // Define a Broadcast Receiver which is going to receive messages from the SDK
+        // onMediaUpload listens to various status of media upload to the cloud.
+        @Override
+        public void onMediaUpload(KCaptureMessageReceiver.MediaUploadStatus mediaUploadStatus,
+                                  Media.MediaType mediaType, URL mediaUrl) {
+            if (mediaUploadStatus != null) {
+                Log.i("KRUMBS-BROADCAST-RECV", mediaUploadStatus.toString());
+                if (mediaUploadStatus == KCaptureMessageReceiver.MediaUploadStatus.UPLOAD_SUCCESS) {
+                    if (mediaType != null && mediaUrl != null) {
+                        Log.i("KRUMBS-BROADCAST-RECV", mediaType + ": " + mediaUrl);
+                    }
+                }
+            }
+        }
+    };
 }
