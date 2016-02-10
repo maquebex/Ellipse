@@ -84,7 +84,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.karumi/dexter/2.2.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.mixpanel.android/mixpanel-android/4.7.0/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.krumbs.opencamera/opencamera/1.0.2-SNAPSHOT/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.krumbs.sdk/krumbs-sdk/1.0.6.4-SNAPSHOT/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/io.krumbs.sdk/krumbs-sdk/1.0.6.5-SNAPSHOT/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
@@ -117,9 +117,9 @@
     <orderEntry type="library" exported="" name="eventbus-2.4.1" level="project" />
     <orderEntry type="library" exported="" name="opencamera-1.0.2-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="aws-android-sdk-s3-2.2.10" level="project" />
+    <orderEntry type="library" exported="" name="krumbs-sdk-1.0.6.5-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="robototextview-2.4.3" level="project" />
     <orderEntry type="library" exported="" name="jackson-core-2.4.1" level="project" />
-    <orderEntry type="library" exported="" name="krumbs-sdk-1.0.6.4-SNAPSHOT" level="project" />
     <orderEntry type="library" exported="" name="play-services-gcm-8.4.0" level="project" />
     <orderEntry type="library" exported="" name="design-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="jackson-databind-2.4.1" level="project" />
