@@ -5,11 +5,7 @@
  */
 package io.krumbs.sdk.starter;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -23,10 +19,6 @@ import io.krumbs.sdk.krumbscapture.KCaptureCompleteListener;
 
 
 public class MainActivity extends AppCompatActivity {
-
-  private static final String[] PERMISSIONS_LOCATION = {Manifest.permission.ACCESS_COARSE_LOCATION,
-          Manifest.permission.ACCESS_FINE_LOCATION};
-  private static final int REQUEST_LOCATION = 1;
   private View cameraView;
   private View startCaptureButton;
   private View helloText;
@@ -40,18 +32,10 @@ public class MainActivity extends AppCompatActivity {
     startCaptureButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-//        NavUtils.navigateUpFromSameTask(MainActivity.this);
-            if (ContextCompat.checkSelfPermission(MainActivity.this,
-                    Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                    || ContextCompat.checkSelfPermission(MainActivity.this,
-                    Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                requestLocationPermission();
-            } else {
-                startCaptureButton.setVisibility(View.INVISIBLE);
-                helloText.setVisibility(View.INVISIBLE);
-                cameraView.setVisibility(View.VISIBLE);
-                startCapture();
-            }
+            startCaptureButton.setVisibility(View.INVISIBLE);
+            helloText.setVisibility(View.INVISIBLE);
+            cameraView.setVisibility(View.VISIBLE);
+            startCapture();
         }
     });
   }
@@ -90,10 +74,6 @@ public class MainActivity extends AppCompatActivity {
     });
   }
 
-    private void requestLocationPermission() {
-    ActivityCompat.requestPermissions(this, PERMISSIONS_LOCATION, REQUEST_LOCATION);
-  }
-
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
     // Inflate the menu; this adds items to the action bar if it is present.
@@ -107,12 +87,10 @@ public class MainActivity extends AppCompatActivity {
     // automatically handle clicks on the Home/Up button, so long
     // as you specify a parent activity in AndroidManifest.xml.
     int id = item.getItemId();
-
     //noinspection SimplifiableIfStatement
     if (id == R.id.action_settings) {
       return true;
     }
-
     return super.onOptionsItemSelected(item);
   }
 }
