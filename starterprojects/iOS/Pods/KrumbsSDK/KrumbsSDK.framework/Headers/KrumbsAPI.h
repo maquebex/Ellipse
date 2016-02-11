@@ -94,6 +94,8 @@
 +(void) shutdown;
 
 
+-(BOOL) isSDKAuthorized;
+
 /*!
  * @brief Configures the model of the Krumbs SDK K-Intent Panel component
  * @discussion This method is the primary configuration point for the Krumbs K-Intent Panel model and defines the custom Intent Categories and

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		CT+sNtNko+5ZtTOKJycssCTgGqQ=
+		6sErdKxp6Eamz2g6i0bC2MbJkBg=
 		</data>
 		<key>FontAwesome.otf</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/KCaptureViewController.h</key>
 		<data>
-		GIGVmeljf3nVlavUBv0wOQ8iW34=
+		96Hqsn+baOtcqn3umsokcogVZGw=
 		</data>
 		<key>Headers/KIntentPanelConfiguration.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Headers/KrumbsAPI.h</key>
 		<data>
-		yyCsL4DLnqo8Y457UIfEAUjvDag=
+		HQCwlATb20drA9SDKWfCzejTevQ=
 		</data>
 		<key>Headers/KrumbsSDK.h</key>
 		<data>
@@ -34,23 +34,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NGZrJhjXkwaSQIaRmBIPY5FGuNc=
+		smCWbpgHXqXOorYTs3PjSimyI8E=
 		</data>
 		<key>KCapturePreviewViewController.nib</key>
 		<data>
-		5z5IExak8nUA3sVqkYPKonjDW04=
+		EFOrbk+LwTSCrrfrvkZbuOyUh5c=
 		</data>
 		<key>KCaptureViewController.nib</key>
 		<data>
-		1dg9BRsQWbZ2mm5Fx3iQUONz5PI=
+		QPhEm4OIXeeeaGHrOVJ9DbQ9NVA=
 		</data>
 		<key>KRMIntentCollectionViewCell.nib</key>
 		<data>
-		0oruueFholbY4Sombr7hZ/nlLAE=
+		1g7G95n2L37l3qUPJS2gvnorkv4=
 		</data>
 		<key>KSmartMessageCollectionViewCell.nib</key>
 		<data>
-		mMAQwy6O5ZrR/nWugCjYLIx0PTw=
+		y70dp8oHJErbrpH/twcZpatdB2I=
 		</data>
 		<key>KrumbsConfig.plist</key>
 		<data>
@@ -83,10 +83,6 @@
 		<key>KrumbsLocalStore.momd/VersionInfo.plist</key>
 		<data>
 		iZGOSqOcv2tTHElLge6xKCbi9q8=
-		</data>
-		<key>KrumbsSDK.podspec</key>
-		<data>
-		kDp/uuWoz0yBBrMEkSiyfi+7Bdg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -110,7 +106,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		CT+sNtNko+5ZtTOKJycssCTgGqQ=
+		6sErdKxp6Eamz2g6i0bC2MbJkBg=
 		</data>
 		<key>FontAwesome.otf</key>
 		<data>
@@ -118,7 +114,7 @@
 		</data>
 		<key>Headers/KCaptureViewController.h</key>
 		<data>
-		GIGVmeljf3nVlavUBv0wOQ8iW34=
+		96Hqsn+baOtcqn3umsokcogVZGw=
 		</data>
 		<key>Headers/KIntentPanelConfiguration.h</key>
 		<data>
@@ -126,7 +122,7 @@
 		</data>
 		<key>Headers/KrumbsAPI.h</key>
 		<data>
-		yyCsL4DLnqo8Y457UIfEAUjvDag=
+		HQCwlATb20drA9SDKWfCzejTevQ=
 		</data>
 		<key>Headers/KrumbsSDK.h</key>
 		<data>
@@ -138,19 +134,19 @@
 		</data>
 		<key>KCapturePreviewViewController.nib</key>
 		<data>
-		5z5IExak8nUA3sVqkYPKonjDW04=
+		EFOrbk+LwTSCrrfrvkZbuOyUh5c=
 		</data>
 		<key>KCaptureViewController.nib</key>
 		<data>
-		1dg9BRsQWbZ2mm5Fx3iQUONz5PI=
+		QPhEm4OIXeeeaGHrOVJ9DbQ9NVA=
 		</data>
 		<key>KRMIntentCollectionViewCell.nib</key>
 		<data>
-		0oruueFholbY4Sombr7hZ/nlLAE=
+		1g7G95n2L37l3qUPJS2gvnorkv4=
 		</data>
 		<key>KSmartMessageCollectionViewCell.nib</key>
 		<data>
-		mMAQwy6O5ZrR/nWugCjYLIx0PTw=
+		y70dp8oHJErbrpH/twcZpatdB2I=
 		</data>
 		<key>KrumbsConfig.plist</key>
 		<data>
@@ -183,10 +179,6 @@
 		<key>KrumbsLocalStore.momd/VersionInfo.plist</key>
 		<data>
 		iZGOSqOcv2tTHElLge6xKCbi9q8=
-		</data>
-		<key>KrumbsSDK.podspec</key>
-		<data>
-		kDp/uuWoz0yBBrMEkSiyfi+7Bdg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

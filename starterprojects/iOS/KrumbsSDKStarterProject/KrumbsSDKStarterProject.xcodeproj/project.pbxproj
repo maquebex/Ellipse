@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A0FA8769E1BDB1089FEA6723 /* Pods_KrumbsSDKStarterProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F45761E5DF08055CBD9189F1 /* Pods_KrumbsSDKStarterProject.framework */; };
+		C960B1CB1C6C0B0C00E658A5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C960B1CA1C6C0B0C00E658A5 /* Images.xcassets */; };
 		C98BF8CA1C5B2F8600575F85 /* KrumbsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */; };
 		C9AA9B391C2D101C00168219 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AA9B371C2D101C00168219 /* LaunchScreen.storyboard */; };
 		C9D39D291C2BAF9A001A26D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D39D281C2BAF9A001A26D5 /* main.m */; };
@@ -55,9 +56,10 @@
 /* Begin PBXFileReference section */
 		3F0BC53E51A16A00F8AC77BD /* Pods-KrumbsSDKStarterProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrumbsSDKStarterProject.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject.release.xcconfig"; sourceTree = "<group>"; };
 		99A3688521D2FAC4631BC8AB /* Pods-KrumbsSDKStarterProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KrumbsSDKStarterProject.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-KrumbsSDKStarterProject/Pods-KrumbsSDKStarterProject.debug.xcconfig"; sourceTree = "<group>"; };
+		C960B1CA1C6C0B0C00E658A5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C98BF8C91C5B2F8600575F85 /* KrumbsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KrumbsSDK.framework; path = "/Volumes/UsersHD/Users/asquithbailey/sandbox/krumbsdev/krumbs-sdk-samples/starterprojects/iOS/KrumbsSDKStarterProject/KrumbsSDK.framework"; sourceTree = "<absolute>"; };
 		C9AA9B381C2D101C00168219 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C9D39D241C2BAF9A001A26D5 /* KrumbsSDKStarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KrumbsSDKStarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D39D241C2BAF9A001A26D5 /* KSDKStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSDKStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D39D281C2BAF9A001A26D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C9D39D2A1C2BAF9A001A26D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		C9D39D2B1C2BAF9A001A26D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -130,7 +132,7 @@
 		C9D39D251C2BAF9A001A26D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C9D39D241C2BAF9A001A26D5 /* KrumbsSDKStarterProject.app */,
+				C9D39D241C2BAF9A001A26D5 /* KSDKStarter.app */,
 				C9D39D3D1C2BAF9A001A26D5 /* KrumbsSDKStarterProjectTests.xctest */,
 				C9D39D481C2BAF9A001A26D5 /* KrumbsSDKStarterProjectUITests.xctest */,
 			);
@@ -140,6 +142,7 @@
 		C9D39D261C2BAF9A001A26D5 /* KrumbsSDKStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				C960B1CA1C6C0B0C00E658A5 /* Images.xcassets */,
 				C9DE37971C5624DE0043E64B /* IntentResourcesExample.xcassets */,
 				C9DE37951C5623240043E64B /* IntentResourcesExample.bundle */,
 				C9AA9B371C2D101C00168219 /* LaunchScreen.storyboard */,
@@ -193,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C9D39D231C2BAF9A001A26D5 /* KrumbsSDKStarterProject */ = {
+		C9D39D231C2BAF9A001A26D5 /* KSDKStarter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C9D39D511C2BAF9A001A26D5 /* Build configuration list for PBXNativeTarget "KrumbsSDKStarterProject" */;
+			buildConfigurationList = C9D39D511C2BAF9A001A26D5 /* Build configuration list for PBXNativeTarget "KSDKStarter" */;
 			buildPhases = (
 				C14984DA996D6281DABDA32D /* Check Pods Manifest.lock */,
 				C9D39D201C2BAF9A001A26D5 /* Sources */,
@@ -209,9 +212,9 @@
 			);
 			dependencies = (
 			);
-			name = KrumbsSDKStarterProject;
+			name = KSDKStarter;
 			productName = KrumbsSDKStarterProject;
-			productReference = C9D39D241C2BAF9A001A26D5 /* KrumbsSDKStarterProject.app */;
+			productReference = C9D39D241C2BAF9A001A26D5 /* KSDKStarter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C9D39D3C1C2BAF9A001A26D5 /* KrumbsSDKStarterProjectTests */ = {
@@ -261,6 +264,7 @@
 				TargetAttributes = {
 					C9D39D231C2BAF9A001A26D5 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 59UD429XMT;
 					};
 					C9D39D3C1C2BAF9A001A26D5 = {
 						CreatedOnToolsVersion = 7.2;
@@ -285,7 +289,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C9D39D231C2BAF9A001A26D5 /* KrumbsSDKStarterProject */,
+				C9D39D231C2BAF9A001A26D5 /* KSDKStarter */,
 				C9D39D3C1C2BAF9A001A26D5 /* KrumbsSDKStarterProjectTests */,
 				C9D39D471C2BAF9A001A26D5 /* KrumbsSDKStarterProjectUITests */,
 			);
@@ -300,6 +304,7 @@
 				C9D39D341C2BAF9A001A26D5 /* Assets.xcassets in Resources */,
 				C9D39D681C2BB689001A26D5 /* KSDKStarterProjectViewController.xib in Resources */,
 				C9DE37961C5623240043E64B /* IntentResourcesExample.bundle in Resources */,
+				C960B1CB1C6C0B0C00E658A5 /* Images.xcassets in Resources */,
 				C9AA9B391C2D101C00168219 /* LaunchScreen.storyboard in Resources */,
 				C9DE37981C5624DE0043E64B /* IntentResourcesExample.xcassets in Resources */,
 			);
@@ -401,12 +406,12 @@
 /* Begin PBXTargetDependency section */
 		C9D39D3F1C2BAF9A001A26D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9D39D231C2BAF9A001A26D5 /* KrumbsSDKStarterProject */;
+			target = C9D39D231C2BAF9A001A26D5 /* KSDKStarter */;
 			targetProxy = C9D39D3E1C2BAF9A001A26D5 /* PBXContainerItemProxy */;
 		};
 		C9D39D4A1C2BAF9A001A26D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9D39D231C2BAF9A001A26D5 /* KrumbsSDKStarterProject */;
+			target = C9D39D231C2BAF9A001A26D5 /* KSDKStarter */;
 			targetProxy = C9D39D491C2BAF9A001A26D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -514,6 +519,8 @@
 			baseConfigurationReference = 99A3688521D2FAC4631BC8AB /* Pods-KrumbsSDKStarterProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -532,6 +539,8 @@
 			baseConfigurationReference = 3F0BC53E51A16A00F8AC77BD /* Pods-KrumbsSDKStarterProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		C9D39D511C2BAF9A001A26D5 /* Build configuration list for PBXNativeTarget "KrumbsSDKStarterProject" */ = {
+		C9D39D511C2BAF9A001A26D5 /* Build configuration list for PBXNativeTarget "KSDKStarter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9D39D521C2BAF9A001A26D5 /* Debug */,

@@ -24,10 +24,15 @@ typedef enum {
     kCameraDirectionFront,
 } kCameraDirection;
 
+typedef enum {
+    kSDKNotInitialized = -1,
+    kCaptureSuccess,
+    kCaptureCancelled
+} kCaptureCompletionState;
 
 extern NSString *const KCaptureControllerImageUrl;
 extern NSString *const KCaptureControllerMediaJsonUrl;
-
+extern NSString *const KCaptureControllerCompletionState;
 extern NSString *kCaptureMediaUploadCompletedNotification;
 
 /*!

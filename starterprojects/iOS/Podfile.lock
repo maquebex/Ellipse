@@ -1,10 +1,10 @@
 PODS:
-  - KrumbsSDK (1.0.5)
+  - KrumbsSDK (1.0.6)
 
 DEPENDENCIES:
-  - KrumbsSDK (~> 1.0.5)
+  - KrumbsSDK (~> 1.0.6)
 
 SPEC CHECKSUMS:
-  KrumbsSDK: c4dcecb4e9486e87ec556404820b4c2f563d41c6
+  KrumbsSDK: 36c65310d7be1ca391eee20f4b8e61a07464432b
 
 COCOAPODS: 0.39.0
