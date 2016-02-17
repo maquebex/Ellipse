@@ -10,11 +10,15 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.util.Log;
 
+import java.net.URL;
 
 import io.krumbs.sdk.KIntentPanelConfiguration;
 import io.krumbs.sdk.KrumbsSDK;
 import io.krumbs.sdk.KrumbsUser;
+import io.krumbs.sdk.data.model.Media;
+import io.krumbs.sdk.krumbscapture.KMediaUploadListener;
 
 
 public class StarterApplication extends Application {
@@ -32,6 +36,27 @@ public class StarterApplication extends Application {
         if (appID != null && clientKey != null) {
 // SDK usage step 1 - initialize the SDK with your application id and client key
             KrumbsSDK.initialize(getApplicationContext(), appID, clientKey);
+
+// Implement the interface KMediaUploadListener.
+// After a Capture completes, the media (photo and audio) is uploaded to the cloud
+// KMediaUploadListener will be used to listen for various state of media upload from the SDK.
+            KMediaUploadListener kMediaUploadListener = new KMediaUploadListener() {
+                // onMediaUpload listens to various status of media upload to the cloud.
+                @Override
+                public void onMediaUpload(String id, KMediaUploadListener.MediaUploadStatus mediaUploadStatus,
+                                          Media.MediaType mediaType, URL mediaUrl) {
+                    if (mediaUploadStatus != null) {
+                        Log.i("KRUMBS-BROADCAST-RECV", mediaUploadStatus.toString());
+                        if (mediaUploadStatus == KMediaUploadListener.MediaUploadStatus.UPLOAD_SUCCESS) {
+                            if (mediaType != null && mediaUrl != null) {
+                                Log.i("KRUMBS-BROADCAST-RECV", mediaType + ": " + id + ", " + mediaUrl);
+                            }
+                        }
+                    }
+                }
+            };
+            // pass the KMediaUploadListener object to the sdk
+            KrumbsSDK.setKMediaUploadListener(this, kMediaUploadListener);
 
             try {
 
@@ -72,7 +97,6 @@ public class StarterApplication extends Application {
                 e.printStackTrace();
             }
         }
-
     }
 
     public String getMetadata(Context context, String name) {
@@ -85,9 +109,6 @@ public class StarterApplication extends Application {
         } catch (PackageManager.NameNotFoundException e) {
 // if we can’t find it in the manifest, just return null
         }
-
         return null;
     }
-
-
 }

@@ -6,6 +6,9 @@
 #import "KSDKStarterProjectViewController.h"
 #import <KrumbsSDK/KrumbsSDK.h>
 extern NSString *const KCaptureControllerImageUrl;
+extern NSString *const KCaptureControllerAudioUrl;
+extern NSString *const KCaptureControllerMediaJsonUrl;
+extern NSString *const KCaptureControllerIsAudioCaptured;
 
 @interface KSDKStarterProjectViewController () <KCaptureViewControllerDelegate>
 
@@ -30,13 +33,22 @@ extern NSString *const KCaptureControllerImageUrl;
 }
 
 - (void) captureController:(KCaptureViewController *)captureController
-didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)captureData {
-    self.imageView.image = [captureData objectForKey:KCaptureControllerImageUrl];
-    [[KrumbsSDK sharedInstance] stopKCaptureViewController];
+didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)media {
+    self.imageView.image = [media objectForKey:KCaptureControllerImageUrl];
+    NSURL *mediaJsonUrl = [media objectForKey:KCaptureControllerMediaJsonUrl];
+    NSLog(@"MediaJSONUrl: %@",mediaJsonUrl);
+    BOOL audioWasCaptured = [(NSString *)[media objectForKey:KCaptureControllerIsAudioCaptured] boolValue];
+    NSLog(@"Audio was captured: %d",audioWasCaptured);
+    if(audioWasCaptured) {
+        NSURL *localAudioUrl = [media objectForKey:KCaptureControllerAudioUrl];
+        NSLog(@"Local Audio Url: %@",localAudioUrl);
+    }
+    kCaptureCompletionState completionState = [(NSString *)[media objectForKey:KCaptureControllerCompletionState] intValue];
+    NSLog(@"Capture Completion state: %d",completionState);
 }
 
 - (void)captureControllerDidCancel:(KCaptureViewController *)captureController {
-    [[KrumbsSDK sharedInstance] stopKCaptureViewController];
+    NSLog(@"User cancelled capture!");
 }
 
 - (void)didReceiveMemoryWarning {

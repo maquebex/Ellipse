@@ -23,4 +23,6 @@
     <string name="action_menu_causes">Causes</string>
     <string name="action_menu_jobs">Jobs</string>
     <string name="action_menu_bites">Bites</string>
+    <string name="krumbssdk_app_id">YOUR_APPLICATION_ID</string>
+    <string name="krumbssdk_client_key">YOUR_CLIENT_KEY</string>
 </resources>
