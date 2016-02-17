@@ -3,10 +3,10 @@ package com.krumbs.getkrumbs.sdk.reachoapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -14,7 +14,10 @@ import android.widget.ImageView;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.FontAwesomeIcons;
 
-import io.krumbs.sdk.krumbscamera.camera.KCameraFrgment;
+import java.util.Map;
+
+import io.krumbs.sdk.KrumbsSDK;
+import io.krumbs.sdk.krumbscapture.KCaptureCompleteListener;
 
 public class PostFormItemActivity extends AppCompatActivity {
 
@@ -60,15 +63,37 @@ public class PostFormItemActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Start SDK Camera");
-                FragmentTransaction fragmentTransaction  =
-                        getSupportFragmentManager().beginTransaction();
-                KCameraFrgment kCameraFrgment = new KCameraFrgment();
-                fragmentTransaction.add(R.id.fullscreen_content, kCameraFrgment).commit();
+                startKrumbsCapture();
             }
 
         });
+    }
 
+    private  void startKrumbsCapture() {
+        int containerId = R.id.fullscreen_content;
+// SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
+        KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
+            @Override
+            public void captureCompleted(CompletionState completionState, boolean audioCaptured, Map<String, Object> map) {
+                // DEBUG LOG
+                if (completionState != null) {
+                    Log.d("KRUMBS-CALLBACK", completionState.toString());
+                }
+                if (completionState == CompletionState.CAPTURE_SUCCESS) {
+// The local image url for your capture
+                    String imagePath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_IMAGE_PATH);
+                    if (audioCaptured) {
+// The local audio url for your capture (if user decided to record audio)
+                        String audioPath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_AUDIO_PATH);
+                    }
+// The mediaJSON url for your capture
+                    String mediaJSONUrl = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_JSON_URL);
+                    Log.i("KRUMBS-CALLBACK", mediaJSONUrl + ", " + imagePath);
+                } else if (completionState == CompletionState.CAPTURE_CANCELLED ||
+                        completionState == CompletionState.SDK_NOT_INITIALIZED) {
+                }
+            }
+        });
     }
 
     @Override
