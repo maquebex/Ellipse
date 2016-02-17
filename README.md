@@ -6,7 +6,7 @@
 These projects are designed to help you understand how to use and integrate with the Krumbs SDK.
 Both Android and iOS project samples will be provided for each project. Some projects may be more advanced than others.
 It is expected that you are using Android Studio IDE and XCode 7 IDE to do your development with the Krumbs SDK.
-* Current version is 1.0.0, matching the Krumbs SDK release version (1/25/16)
+* Current versions are : Android - 1.0.6.8-SNAPSHOT (via Gradle) iOS - 1.0.2 (via Cocoa Pods) 
 
 
 ### How do I get set up? ###
