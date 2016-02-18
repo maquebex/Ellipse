@@ -1,0 +1,22 @@
+{
+  "Damage": {
+    "index": 1,
+    "intents_file": "damage.json"
+  },
+  "Disease": {
+    "index": 2,
+    "intents_file": "disease.json"
+  },
+  "Pests": {
+    "index": 3,
+    "intents_file": "pests.json"
+  },
+  "Notes": {
+    "index": 4,
+    "intents_file": "notes.json"
+  },
+  "Selfie": {
+    "index": 5,
+    "intents_file": "selfie.json"
+  }
+}

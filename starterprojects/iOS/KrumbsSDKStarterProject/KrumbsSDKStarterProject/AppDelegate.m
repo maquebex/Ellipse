@@ -16,6 +16,52 @@
 @implementation AppDelegate
 
 
+- (void)singlePanelSetup:(KrumbsSDK *)sharedInstance {
+    // Register the Intent Category model with JSON files in a NSBundle, and XC AssetBundle with emoji images
+    // The AssetBundle can be generated from the SDK tool 'asset-generator'
+    [sharedInstance registerIntentCategories:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"IntentResourcesExample" ofType:@"bundle"]] withAssetResourceName:@"IntentAssetsExample"];
+    
+    
+    // Configure the color scheme of the IntentPanel
+    KIntentPanelConfiguration *uiConfig = [[KrumbsSDK sharedInstance] getIntentPanelViewConfigurationDefaults];
+    [uiConfig setIntentPanelBarColor:[UIColor colorWithRed:0.020 green:0.612 blue:0.482 alpha:1.00]];
+    [uiConfig setIntentPanelBarTextColor:[UIColor whiteColor]];
+    
+    [sharedInstance setIntentPanelViewConfigurationDefaults:uiConfig];
+}
+
+- (void)multiPanelSetup:(KrumbsSDK *)sharedInstance {
+
+    NSString *housingTheme = @"myHousing";
+    NSString *housingResourceName = @"Housing";
+    NSString *agriTechResourceName = @"AgriTech";
+    NSString *agriTechTheme = @"AgriTech";
+    NSString *smartCitiesResourceName = @"SmartCities";
+    NSString *smartCitiesTheme = @"SmartCities";
+    
+    KIntentPanelConfiguration *housingConfig = [KIntentPanelConfiguration new];
+    [sharedInstance registerIntentCategories:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:housingResourceName ofType:@"bundle"]] withAssetResourceName:housingResourceName forApplicationTheme:housingTheme];
+    // Configure the color scheme of the IntentPanel: use a yellow color
+    [housingConfig setIntentPanelBarColor:[UIColor colorWithRed:0.980 green:0.882 blue:0.208 alpha:1.00]];
+    [housingConfig setIntentPanelBarTextColor:[UIColor blackColor]];
+    [housingConfig setEmojiTextColor:[UIColor blackColor]];
+    [sharedInstance setIntentPanelViewConfigurationDefaults:housingConfig forApplicationTheme:housingTheme];
+
+    KIntentPanelConfiguration *agriTechConfig = [KIntentPanelConfiguration new];
+    [sharedInstance registerIntentCategories:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:agriTechResourceName ofType:@"bundle"]] withAssetResourceName:agriTechResourceName forApplicationTheme:agriTechTheme];
+    [agriTechConfig setIntentPanelBarColor:[UIColor colorWithRed:0.875 green:0.224 blue:0.298 alpha:1.00]];
+    [agriTechConfig setIntentPanelBarTextColor:[UIColor whiteColor]];
+    [sharedInstance setIntentPanelViewConfigurationDefaults:agriTechConfig forApplicationTheme:agriTechTheme];
+    
+    
+    KIntentPanelConfiguration *defaultConfig = [KIntentPanelConfiguration new];
+    [sharedInstance registerIntentCategories:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:smartCitiesResourceName ofType:@"bundle"]] withAssetResourceName:smartCitiesResourceName forApplicationTheme:smartCitiesTheme];
+    [sharedInstance setIntentPanelViewConfigurationDefaults:defaultConfig forApplicationTheme:smartCitiesTheme];
+
+    
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     NSString *appID = @"YOUR_APPLICATION_ID";
@@ -32,18 +78,13 @@
     // Register your user (if you don't have anonymous access)
     [sharedInstance registerUserWithEmail:testEmail firstName:testFN lastName:testSN];
     
-    // Register the Intent Category model with JSON files in a NSBundle, and XC AssetBundle with emoji images
-    // The AssetBundle can be generated from the SDK tool 'asset-generator'
-    [sharedInstance registerIntentCategories:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"IntentResourcesExample" ofType:@"bundle"]] withAssetResourceName:@"IntentAssetsExample"];
-    
-    
-    // Configure the color scheme of the IntentPanel
-    KIntentPanelConfiguration *uiConfig = [[KrumbsSDK sharedInstance] getIntentPanelViewConfigurationDefaults];
-    [uiConfig setIntentPanelBarColor:[UIColor colorWithRed:0.008 green:0.620 blue:0.882 alpha:1.00]];
-    [uiConfig setIntentPanelBarTextColor:[UIColor yellowColor]];
-    
-    [[KrumbsSDK sharedInstance] setIntentPanelViewConfigurationDefaults:uiConfig];
+// Example setup of a single Intent panel (no theme name)
+//    [self singlePanelSetup:sharedInstance];
 
+// Example setup of multiple panels (different theme names
+    [self multiPanelSetup:sharedInstance];
+    
+    
     
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 

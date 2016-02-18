@@ -25,7 +25,7 @@ extern NSString *const KCaptureControllerIsAudioCaptured;
     
     
     // start the KCapture component in your view controller and register a delegate for callback when complete
-    KCaptureViewController* vc = [[KrumbsSDK sharedInstance] startKCaptureViewController];
+    KCapturePageViewController* vc = [[KrumbsSDK sharedInstance] startKCaptureViewController];
     vc.delegate = self;
     
     
