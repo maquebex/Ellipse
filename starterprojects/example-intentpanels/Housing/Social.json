@@ -1,15 +1,15 @@
 {
   "intents": [
     {
-      "Events": {
+      "Celebrating": {
         "synonyms": [
           "Weekend get together",
           "Birthday party",
           "BBQ"
         ],
-        "unicode": "1f5d3",
+        "unicode": "1f64c",
         "expression_id": 1,
-        "resource_name": "emoji_1f5d3"
+        "resource_name": "emoji_1f64c"
       }
     },
     {
