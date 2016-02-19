@@ -8,7 +8,7 @@ Both Android and iOS project samples will be provided for each project. Some pro
 It is expected that you are using Android Studio IDE and XCode 7 IDE to do your development with the Krumbs SDK.
 * Current versions are : 
   Android - 1.0.6.8-SNAPSHOT (via Gradle)
-  iOS - 1.0.2 (via Cocoa Pods)
+  iOS - 1.0.7 (via Cocoa Pods)
 
 ### How do I get set up? ###
 
