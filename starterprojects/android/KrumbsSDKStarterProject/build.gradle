@@ -1,5 +1,10 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+    compile 'io.krumbs.sdk:krumbs-sdk:1.0.7.5-SNAPSHOT'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -18,11 +23,15 @@ android {
         }
     }
     packagingOptions {
-        exclude 'META-INF/NOTICE' // will not include NOTICE file
-        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
     }
-}
-
-dependencies {
-    compile 'io.krumbs.sdk:krumbs-sdk:1.0.7.5-SNAPSHOT'
 }

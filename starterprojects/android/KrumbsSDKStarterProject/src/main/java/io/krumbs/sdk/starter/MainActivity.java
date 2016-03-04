@@ -5,6 +5,11 @@
  */
 package io.krumbs.sdk.starter;
 
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -22,22 +27,55 @@ public class MainActivity extends AppCompatActivity {
   private View cameraView;
   private View startCaptureButton;
   private View helloText;
+  LocationManager locManager;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+    double fromLat=0; double fromLong=0;
+
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     startCaptureButton = findViewById(R.id.kcapturebutton);
     helloText = findViewById(R.id.hello_world);
     cameraView = findViewById(R.id.camera_container);
-    startCaptureButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            startCaptureButton.setVisibility(View.INVISIBLE);
-            helloText.setVisibility(View.INVISIBLE);
-            cameraView.setVisibility(View.VISIBLE);
-            startCapture();
+    // user location
+    try{
+      locManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+      locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000L,500.0f, new LocationFinder());
+      Location location = locManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+      if(location!=null){
+          fromLat = location.getLatitude();
+          fromLong =location.getLongitude();
+          Log.d("NEXTGEN","Location is lat "+fromLat+"long "+fromLong);
+      } else {
+          fromLat =33.6839470;
+          fromLong= -117.7946940;
+          Log.d("NEXTGEN","NO Location preset to "+fromLat+" "+fromLong);
+      }
+        startCaptureButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startCaptureButton.setVisibility(View.INVISIBLE);
+                helloText.setVisibility(View.INVISIBLE);
+                cameraView.setVisibility(View.VISIBLE);
+                startCapture();
+            }
+        });
+
+        //call APIS
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            new FoursquareAPI(fromLat,fromLong).execute();
+            new EventfulAPI(fromLat,fromLong).execute();
+        } else {
+            fromLat=33.6839470;
+            fromLong = -117.7946940;
+            Log.d("NEXTGEN","No network connection available.");
         }
-    });
+    } catch (SecurityException e){
+        e.printStackTrace();
+    }
   }
 
 
@@ -93,4 +131,5 @@ public class MainActivity extends AppCompatActivity {
     }
     return super.onOptionsItemSelected(item);
   }
+
 }
