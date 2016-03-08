@@ -23,7 +23,7 @@ public class FoursquareAPI extends AsyncTask{
     protected Object doInBackground(Object[] params) {
         // make Call to the url
         Log.d("NEXTGEN","HERE");
-        temp = WebServiceCall.makeCall("https://api.foursquare.com/v2/venues/search?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=20130815&ll="+latitude+","+longtitude);
+        temp = WebServiceCall.getData("https://api.foursquare.com/v2/venues/search?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=20130815&ll="+latitude+","+longtitude);
         Log.d("NEXTGEN","FS Res "+temp);
         return "";
 

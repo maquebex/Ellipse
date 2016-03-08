@@ -19,7 +19,7 @@ public class EventfulAPI extends AsyncTask{
 
     @Override
     protected Object doInBackground(Object[] params) {
-        String response = WebServiceCall.makeCall("http://api.eventful.com/rest/events/search?app_key="+APPLICATION_KEY+"&where=" + latitude + "," + longtitude);
+        String response = WebServiceCall.getData("http://api.eventful.com/rest/events/search?app_key="+APPLICATION_KEY+"&where=" + latitude + "," + longtitude);
         Log.d("NEXTGEN", "WEB RES from EVENTFUL" + response);
         return "";
     }

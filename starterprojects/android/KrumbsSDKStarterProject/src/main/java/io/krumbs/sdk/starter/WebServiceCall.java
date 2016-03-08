@@ -3,19 +3,28 @@ package io.krumbs.sdk.starter;
 import android.util.Log;
 
 import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.ByteArrayBuffer;
 
 import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by maquebex on 3/3/2016.
  */
 public class WebServiceCall {
-    public static String makeCall(String url) {
+    public static String getData(String url) {
         Log.d("NEXTGEN", "MAKING CALL");
 
         // string buffers the url
@@ -46,5 +55,29 @@ public class WebServiceCall {
         }
         // trim the whitespaces
         return replyString.trim();
+    }
+
+    public static int postData(String url, HashMap<String, String> postData) {
+        // Create a new HttpClient and Post Header
+        HttpClient httpclient = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost(url);
+        int responsecode = -1;
+        try {
+            // Add your data
+            List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+            for (String key:postData.keySet()) {
+                nameValuePairs.add(new BasicNameValuePair(key, postData.get(key)));
+            }
+            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+            // Execute HTTP Post Request
+            HttpResponse response = httpclient.execute(httppost);
+            responsecode = response.getStatusLine().getStatusCode();
+        } catch (ClientProtocolException e) {
+            // TODO Auto-generated catch block
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+        }
+        return responsecode;
     }
 }

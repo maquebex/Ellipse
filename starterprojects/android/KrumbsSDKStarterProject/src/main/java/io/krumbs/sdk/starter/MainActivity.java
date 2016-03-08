@@ -6,6 +6,7 @@
 package io.krumbs.sdk.starter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -16,6 +17,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.Map;
 
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
   private View startCaptureButton;
   private View helloText;
   LocationManager locManager;
+  Button reco;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     double fromLat=0; double fromLong=0;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     startCaptureButton = findViewById(R.id.kcapturebutton);
+    reco = (Button) findViewById(R.id.recobutton);
     helloText = findViewById(R.id.hello_world);
     cameraView = findViewById(R.id.camera_container);
     // user location
@@ -61,6 +65,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        reco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getRecommendations();
+            }
+        });
+
         //call APIS
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -78,7 +89,10 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
-
+  private void getRecommendations(){
+      Intent intent = new Intent(this, RecoListActivity.class);
+      startActivity(intent);
+  }
   private void startCapture() {
     int containerId = R.id.camera_container;
 // SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
