@@ -9,9 +9,13 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.util.ByteArrayBuffer;
+import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -57,18 +61,17 @@ public class WebServiceCall {
         return replyString.trim();
     }
 
-    public static int postData(String url, HashMap<String, String> postData) {
+    public static int postData(String url, JSONObject postData) {
         // Create a new HttpClient and Post Header
         HttpClient httpclient = new DefaultHttpClient();
         HttpPost httppost = new HttpPost(url);
         int responsecode = -1;
         try {
             // Add your data
-            List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-            for (String key:postData.keySet()) {
-                nameValuePairs.add(new BasicNameValuePair(key, postData.get(key)));
-            }
-            httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+            StringEntity se = new StringEntity(postData.toString());
+            se.setContentType("application/json;charset=UTF-8");
+            se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE,"application/json;charset=UTF-8"));
+            httppost.setEntity(se);
 
             // Execute HTTP Post Request
             HttpResponse response = httpclient.execute(httppost);

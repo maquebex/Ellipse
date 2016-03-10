@@ -19,6 +19,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+
+import java.util.HashMap;
 import java.util.Map;
 
 import io.krumbs.sdk.KrumbsSDK;
@@ -31,16 +36,24 @@ public class MainActivity extends AppCompatActivity {
   private View helloText;
   LocationManager locManager;
   Button reco;
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
+    private MockLocationProvider mock;
     double fromLat=0; double fromLong=0;
 
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+      setContentView(R.layout.activity_main);
     startCaptureButton = findViewById(R.id.kcapturebutton);
     reco = (Button) findViewById(R.id.recobutton);
     helloText = findViewById(R.id.hello_world);
     cameraView = findViewById(R.id.camera_container);
+
+      // Set Mock location
+      mock = new MockLocationProvider(LocationManager.GPS_PROVIDER, this);
+      //Set test location
+      mock.pushLocation(33.648458, -117.841960); // Starbucks location
+
     // user location
     try{
       locManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
@@ -73,17 +86,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //call APIS
-        ConnectivityManager connMgr = (ConnectivityManager)
+        /*ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            new FoursquareAPI(fromLat,fromLong).execute();
-            new EventfulAPI(fromLat,fromLong).execute();
+            new FoursquareAPI(fromLat,fromLong,"").execute();
+            //new EventfulAPI(fromLat,fromLong).execute();
         } else {
             fromLat=33.6839470;
             fromLong = -117.7946940;
             Log.d("NEXTGEN","No network connection available.");
-        }
+        }*/
+
     } catch (SecurityException e){
         e.printStackTrace();
     }
@@ -96,34 +110,35 @@ public class MainActivity extends AppCompatActivity {
   private void startCapture() {
     int containerId = R.id.camera_container;
 // SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
-    KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
-        @Override
-        public void captureCompleted(CompletionState completionState, boolean audioCaptured, Map<String, Object> map) {
-            // DEBUG LOG
-            if (completionState != null) {
-                Log.d("KRUMBS-CALLBACK", completionState.toString());
-            }
-            if (completionState == CompletionState.CAPTURE_SUCCESS) {
+      KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
+          @Override
+          public void captureCompleted(CompletionState completionState, boolean audioCaptured, Map<String, Object> map) {
+              // DEBUG LOG
+              if (completionState != null) {
+                  Log.d("KRUMBS-CALLBACK", completionState.toString());
+              }
+              if (completionState == CompletionState.CAPTURE_SUCCESS) {
 // The local image url for your capture
-                String imagePath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_IMAGE_PATH);
-                if (audioCaptured) {
+                  String imagePath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_IMAGE_PATH);
+                  if (audioCaptured) {
 // The local audio url for your capture (if user decided to record audio)
-                    String audioPath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_AUDIO_PATH);
-                }
+                      String audioPath = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_AUDIO_PATH);
+                  }
 // The mediaJSON url for your capture
-                String mediaJSONUrl = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_JSON_URL);
-                Log.i("KRUMBS-CALLBACK", mediaJSONUrl + ", " + imagePath);
-                cameraView.setVisibility(View.INVISIBLE);
-                startCaptureButton.setVisibility(View.VISIBLE);
-                helloText.setVisibility(View.VISIBLE);
-            } else if (completionState == CompletionState.CAPTURE_CANCELLED ||
-                    completionState == CompletionState.SDK_NOT_INITIALIZED) {
-                cameraView.setVisibility(View.INVISIBLE);
-                startCaptureButton.setVisibility(View.VISIBLE);
-                helloText.setVisibility(View.VISIBLE);
-            }
-        }
-    });
+                  String mediaJSONUrl = (String) map.get(KCaptureCompleteListener.CAPTURE_MEDIA_JSON_URL);
+                  postData(mediaJSONUrl);
+                  Log.i("KRUMBS-CALLBACK", mediaJSONUrl + ", " + imagePath);
+                  cameraView.setVisibility(View.INVISIBLE);
+                  startCaptureButton.setVisibility(View.VISIBLE);
+                  helloText.setVisibility(View.VISIBLE);
+              } else if (completionState == CompletionState.CAPTURE_CANCELLED ||
+                      completionState == CompletionState.SDK_NOT_INITIALIZED) {
+                  cameraView.setVisibility(View.INVISIBLE);
+                  startCaptureButton.setVisibility(View.VISIBLE);
+                  helloText.setVisibility(View.VISIBLE);
+              }
+          }
+      });
   }
 
   @Override
@@ -145,5 +160,14 @@ public class MainActivity extends AppCompatActivity {
     }
     return super.onOptionsItemSelected(item);
   }
+
+   public void postData(String mediaJSONURL)
+   {
+       ConnectivityManager connMgr = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+       NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+       if (networkInfo != null && networkInfo.isConnected()) {
+           new FoursquareAPI(fromLat,fromLong,mediaJSONURL).execute();
+       }
+   }
 
 }

@@ -4,8 +4,8 @@
   ~
   -->
 <resources>
-    <string name="krumbssdk_app_id">YOUR_APPLICATION_ID</string>
-    <string name="krumbssdk_client_key">YOUR_CLIENT_KEY</string>
+    <string name="krumbssdk_app_id">MGomjogbS0tDEMhF7XOJJVUxgfUcudGEC7sVF7EQ</string>
+    <string name="krumbssdk_client_key">1gtqa8JUp1X30syCTBB0J6CM1yk35D3SSNZlNcI0</string>
 
     <string name="app_name">Krumbs SDK Starter Project</string>
 
