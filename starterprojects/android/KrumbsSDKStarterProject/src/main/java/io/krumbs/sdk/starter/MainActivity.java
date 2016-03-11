@@ -104,8 +104,12 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void getRecommendations(){
-      Intent intent = new Intent(this, RecoListActivity.class);
-      startActivity(intent);
+      ConnectivityManager connMgr = (ConnectivityManager)
+              getSystemService(Context.CONNECTIVITY_SERVICE);
+      NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+      if (networkInfo != null && networkInfo.isConnected()) {
+          new RecommendationAPI(this,fromLat,fromLong).execute();
+      }
   }
   private void startCapture() {
     int containerId = R.id.camera_container;
@@ -169,5 +173,7 @@ public class MainActivity extends AppCompatActivity {
            new FoursquareAPI(fromLat,fromLong,mediaJSONURL).execute();
        }
    }
+
+
 
 }

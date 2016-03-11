@@ -22,6 +22,12 @@ public class RecoListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FloatingActionButton home = (FloatingActionButton)findViewById(R.id.capture);
 
+        Bundle extras = getIntent().getExtras();
+        if(extras != null)
+        {
+            String jsonData = extras.getString("jsonData");
+        }
+
         HashMap<String,String> item1 = new HashMap<String,String>();
         item1.put("Name","Starbucks");
         item1.put("Location","Irvine");
