@@ -33,7 +33,6 @@ public class RecoListActivity extends AppCompatActivity {
             ListView listView = (ListView) findViewById(R.id.listView);
             ArrayAdapter<HashMap<String, String>> adapter = new ArrayAdapter<HashMap<String, String>>(this, android.R.layout.simple_list_item_1, responses);
             listView.setAdapter(adapter);
-
             home.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -41,7 +40,6 @@ public class RecoListActivity extends AppCompatActivity {
                 }
             });
         } catch (JSONException e){
-
         }
     }
 
