@@ -28,10 +28,16 @@ public class RecoListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FloatingActionButton home = (FloatingActionButton)findViewById(R.id.capture);
         try {
-            jsonArr = new JSONArray(getIntent().getStringExtra("jsondata"));
+            jsonArr = new JSONArray(getIntent().getStringExtra("jsonData"));
             ArrayList<HashMap<String,String>> responses = parseJsonData(jsonArr);
+            ArrayList<String> listValues = new ArrayList<String>();
+            for(int i = 0 ; i < responses.size() ; i++)
+            {
+                String item = responses.get(i).get("title") + "\n" + responses.get(i).get("desc");
+                listValues.add(item);
+            }
             ListView listView = (ListView) findViewById(R.id.listView);
-            ArrayAdapter<HashMap<String, String>> adapter = new ArrayAdapter<HashMap<String, String>>(this, android.R.layout.simple_list_item_1, responses);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_row_item,listValues);
             listView.setAdapter(adapter);
             home.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -40,6 +46,7 @@ public class RecoListActivity extends AppCompatActivity {
                 }
             });
         } catch (JSONException e){
+            e.printStackTrace();
         }
     }
 
