@@ -1,0 +1,101 @@
+{
+  "intents": [
+    {
+      "Happy": {
+        "synonyms": [
+          "Happy",
+          "Delighted",
+          "Glad",
+          "Thrilled",
+          "Cheerful",
+          "Smile",
+          "Happiness",
+          "Fulloflife",
+          "Sunshine",
+          "Positive",
+          "Enjoy",
+          "Hope",
+          "Inspiration",
+          "Radiant",
+          "Bonheur"
+        ],
+        "unicode": "1f600",
+        "expression_id": 1,
+        "resource_name": "emoji_1f600"
+      }
+    },
+    {
+      "Yawn": {
+        "synonyms": [
+          "Yawn",
+          "Iambored",
+          "Facepalm",
+          "Saveme",
+          "Help!",
+          "Fail"
+        ],
+        "unicode": "1f634",
+        "expression_id": 4,
+        "resource_name": "emoji_1f634"
+      }
+    },
+    {
+      "Love": {
+        "synonyms": [
+          "Love",
+          "Cute",
+          "Blissful",
+          "Mylove",
+          "Loveyou",
+          "Amor",
+          "Monamour",
+          "Monamie",
+          "Loveofmylife",
+          "Baby",
+          "Oneinamillion",
+          "Miamor",
+          "Amoremio",
+          "Loveisintheair",
+          "Tiamo",
+          "Monhomme",
+          "Hunny",
+          "Gorgeous",
+          "Awww",
+          "Adorable",
+          "Pretty",
+          "Kissyou",
+          "Cutiepie",
+          "Hugs",
+          "Loverher",
+          "Lovehim",
+          "Fluffy",
+          "Puppylove",
+          "Ilovemydog",
+          "Furbaby",
+          "Dogoftheday",
+          "Petoftheday"
+        ],
+        "unicode": "1f60d",
+        "expression_id": 2,
+        "resource_name": "emoji_1f60d"
+      }
+    },
+    {
+      "Neutral": {
+        "synonyms": [
+          "Neutral",
+          "Whatsup?",
+          "Chill",
+          "Hey",
+          "Hi",
+          "Howdy",
+          "Calm"
+        ],
+        "unicode": "1f611",
+        "expression_id": 3,
+        "resource_name": "emoji_1f611"
+      }
+    }
+  ]
+}
+

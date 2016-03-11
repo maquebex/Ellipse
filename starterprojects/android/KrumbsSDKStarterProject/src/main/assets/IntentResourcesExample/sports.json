@@ -1,0 +1,71 @@
+{
+  "intents": [
+    {
+      "Happy": {
+        "synonyms": [
+          "Happy",
+          "Delighted",
+          "Glad",
+          "Thrilled",
+          "Cheerful",
+          "Smile",
+          "Happiness",
+          "Fulloflife",
+          "Sunshine",
+          "Positive",
+          "Enjoy",
+          "Hope",
+          "Inspiration",
+          "Radiant",
+          "Bonheur"
+        ],
+        "unicode": "1f600",
+        "expression_id": 1,
+        "resource_name": "emoji_1f600"
+      }
+    },
+    {
+      "Upset": {
+        "synonyms": [
+          "Upset",
+          "Omg",
+          "Doh",
+          "Cheermeup",
+          "Depressed",
+          "Frustrated",
+          "Dejected",
+          "Sad",
+          "Highsandlows",
+          "Melancholia",
+          "Lame",
+          "Bummed",
+          "Stressed",
+          "Alone",
+          "Sadness",
+          "Tears",
+          "Lonely",
+          "Goingmental",
+          "Badmood",
+          "Hurt",
+          "Anxious",
+          "Worthless"
+        ],
+        "unicode": "1f621",
+        "expression_id": 2,
+        "resource_name": "emoji_1f621"
+      }
+    },
+    {
+      "Celebrate": {
+        "synonyms": [
+          "Celebrate",
+          "Victory",
+          "Winning"
+        ],
+        "unicode": "1f44f",
+        "expression_id": 3,
+        "resource_name": "emoji_1f44f"
+      }
+    }
+  ]
+}
