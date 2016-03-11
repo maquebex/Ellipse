@@ -127,24 +127,23 @@ public class FoursquareAPI extends AsyncTask{
 
     protected void buildJSONandPostData(ArrayList<String> tags)
     {
-        JSONObject data = new JSONObject();
+        JSONObject checkin = new JSONObject();
         try {
-            JSONObject checkin = new JSONObject();
+
             checkin.put("krumbs", krumbsURL);
             JSONArray jsonTags = new JSONArray();
             for(int i = 0 ; i < tags.size() ; i++)
             {
                 jsonTags.put(tags.get(i));
             }
-            checkin.put("tags",jsonTags);
-            checkin.put("userID",MainActivity.userID);
-            data.put("checkin",checkin);
+            checkin.put("loc_tags",jsonTags);
+            checkin.put("uid",MainActivity.userID);
         }
         catch (JSONException e)
         {
             e.printStackTrace();
         }
         // make post call to backend
-        int retCode = WebServiceCall.postData("http://192.168.0.25:5000/checkin", data);
+        int retCode = WebServiceCall.postData("http://192.168.0.25:5000/checkin", checkin);
     }
 }
