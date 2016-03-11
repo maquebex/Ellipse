@@ -9,11 +9,17 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class RecoListActivity extends AppCompatActivity {
     ArrayList<HashMap<String,String>> data = new ArrayList<HashMap<String, String>>();
+    JSONArray jsonArr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,30 +27,22 @@ public class RecoListActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton home = (FloatingActionButton)findViewById(R.id.capture);
+        try {
+            jsonArr = new JSONArray(getIntent().getStringExtra("jsondata"));
+            ArrayList<HashMap<String,String>> responses = parseJsonData(jsonArr);
+            ListView listView = (ListView) findViewById(R.id.listView);
+            ArrayAdapter<HashMap<String, String>> adapter = new ArrayAdapter<HashMap<String, String>>(this, android.R.layout.simple_list_item_1, responses);
+            listView.setAdapter(adapter);
 
-        HashMap<String,String> item1 = new HashMap<String,String>();
-        item1.put("Name","Starbucks");
-        item1.put("Location","Irvine");
-        item1.put("Category","Cafe");
+            home.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    backtoHomepage();
+                }
+            });
+        } catch (JSONException e){
 
-        HashMap<String,String> item2 = new HashMap<String,String>();
-        item2.put("Name", "Subway");
-        item2.put("Location","San diego");
-        item2.put("Category","sandwich");
-
-        data.add(item1);
-        data.add(item2);
-
-        ListView listView = (ListView)findViewById(R.id.listView);
-        ArrayAdapter<HashMap<String,String>> adapter = new ArrayAdapter<HashMap<String,String>>(this,android.R.layout.simple_list_item_1 ,data);
-        listView.setAdapter(adapter);
-
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                backtoHomepage();
-            }
-        });
+        }
     }
 
     public void backtoHomepage(){
@@ -53,4 +51,24 @@ public class RecoListActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public ArrayList<HashMap<String, String>>  parseJsonData(JSONArray jsondata) {
+        ArrayList<HashMap<String,String>> responseData = new ArrayList<HashMap<String, String>>();
+        try{
+            for(int i=0;i<jsondata.length();i++) {
+               HashMap<String, String> jsonRecord = new HashMap<String, String>();
+               String title = (String)((JSONObject)jsondata.get(i)).get("title");
+               String desc = (String)((JSONObject)jsondata.get(i)).get("desc");
+               String url = (String)((JSONObject)jsondata.get(i)).get("url");
+               jsonRecord.put("title",title);
+               jsonRecord.put("desc",desc);
+               jsonRecord.put("url",url);
+
+               responseData.add(jsonRecord);
+            }
+        } catch (JSONException e){
+            e.printStackTrace();
+        }
+
+        return responseData;
+    }
 }

@@ -19,11 +19,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationServices;
-
-import java.util.HashMap;
 import java.util.Map;
 
 import io.krumbs.sdk.KrumbsSDK;
@@ -81,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         reco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //WebServiceCall.getData("server url");
                 getRecommendations();
             }
         });
@@ -106,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
   private void getRecommendations(){
       Intent intent = new Intent(this, RecoListActivity.class);
       startActivity(intent);
+
   }
   private void startCapture() {
     int containerId = R.id.camera_container;
