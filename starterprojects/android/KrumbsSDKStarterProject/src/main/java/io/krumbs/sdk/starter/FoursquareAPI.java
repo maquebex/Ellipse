@@ -1,5 +1,7 @@
 package io.krumbs.sdk.starter;
 
+import android.app.Activity;
+import android.bluetooth.BluetoothClass;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -135,6 +137,7 @@ public class FoursquareAPI extends AsyncTask{
                 jsonTags.put(tags.get(i));
             }
             checkin.put("tags",jsonTags);
+            checkin.put("userID",MainActivity.userID);
             data.put("checkin",checkin);
         }
         catch (JSONException e)

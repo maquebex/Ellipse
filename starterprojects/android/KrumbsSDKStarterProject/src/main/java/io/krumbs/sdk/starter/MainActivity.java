@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
   Button reco;
     private MockLocationProvider mock;
     double fromLat=0; double fromLong=0;
+    public static String userID ;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
       mock = new MockLocationProvider(LocationManager.GPS_PROVIDER, this);
       //Set test location
       mock.pushLocation(33.648458, -117.841960); // Starbucks location
+
+      MainActivity.userID = DeviceUtils.getUsername(this.getApplicationContext());
 
     // user location
     try{

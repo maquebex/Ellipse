@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,9 +35,12 @@ public class RecoListActivity extends AppCompatActivity {
             ArrayList<String> listValues = new ArrayList<String>();
             for(int i = 0 ; i < responses.size() ; i++)
             {
-                String item = responses.get(i).get("title") + "\n" + responses.get(i).get("desc");
+                //String item = responses.get(i).get("title") + "\n" + responses.get(i).get("desc");
+                String item = "Event :"+responses.get(i).get("title") + "\n" +"Link :"+responses.get(i).get("url")+ "\n"+ "Info :"+responses.get(i).get("desc");
                 listValues.add(item);
             }
+            //TextView tv = (TextView)findViewById(R.id.rowTextView);
+            //tv.setMovementMethod(new ScrollingMovementMethod());
             ListView listView = (ListView) findViewById(R.id.listView);
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_row_item,listValues);
             listView.setAdapter(adapter);
