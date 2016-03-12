@@ -1,7 +1,5 @@
 package io.krumbs.sdk.starter;
 
-import android.app.Activity;
-import android.bluetooth.BluetoothClass;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -10,7 +8,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by maquebex on 3/2/2016.
@@ -144,6 +141,7 @@ public class FoursquareAPI extends AsyncTask{
             e.printStackTrace();
         }
         // make post call to backend
+        //int retCode = WebServiceCall.postData("http://ellipse.herokuapp.com/checkin", checkin);
         int retCode = WebServiceCall.postData("http://192.168.0.25:5000/checkin", checkin);
     }
 }

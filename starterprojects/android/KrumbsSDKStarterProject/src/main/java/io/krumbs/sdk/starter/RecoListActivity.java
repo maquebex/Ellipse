@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.method.ScrollingMovementMethod;
+import android.text.Html;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -33,14 +33,14 @@ public class RecoListActivity extends AppCompatActivity {
             jsonArr = new JSONArray(getIntent().getStringExtra("jsonData"));
             ArrayList<HashMap<String,String>> responses = parseJsonData(jsonArr);
             ArrayList<String> listValues = new ArrayList<String>();
+            TextView rowText = (TextView)findViewById(R.id.rowTextView);
             for(int i = 0 ; i < responses.size() ; i++)
             {
-                //String item = responses.get(i).get("title") + "\n" + responses.get(i).get("desc");
-                String item = "Event :"+responses.get(i).get("title") + "\n" +"Link :"+responses.get(i).get("url")+ "\n"+ "Info :"+responses.get(i).get("desc");
+                String item = "<b>Event :</b>"+responses.get(i).get("title") + "\n" +"<a href=\""+responses.get(i).get("url")+"\">"+"<b>Link :</b>"+"</a>"+ "\n"+ "<b>Info :</b>"+responses.get(i).get("desc");
+                rowText.setText(Html.fromHtml(item));
                 listValues.add(item);
             }
-            //TextView tv = (TextView)findViewById(R.id.rowTextView);
-            //tv.setMovementMethod(new ScrollingMovementMethod());
+
             ListView listView = (ListView) findViewById(R.id.listView);
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_row_item,listValues);
             listView.setAdapter(adapter);
