@@ -6,7 +6,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -33,16 +36,32 @@ public class RecoListActivity extends AppCompatActivity {
             jsonArr = new JSONArray(getIntent().getStringExtra("jsonData"));
             ArrayList<HashMap<String,String>> responses = parseJsonData(jsonArr);
             ArrayList<String> listValues = new ArrayList<String>();
-            TextView rowText = (TextView)findViewById(R.id.rowTextView);
             for(int i = 0 ; i < responses.size() ; i++)
             {
-                String item = "<b>Event :</b>"+responses.get(i).get("title") + "\n" +"<a href=\""+responses.get(i).get("url")+"\">"+"<b>Link :</b>"+"</a>"+ "\n"+ "<b>Info :</b>"+responses.get(i).get("desc");
-                rowText.setText(Html.fromHtml(item));
+                String item = "<b>Event :</b>"+responses.get(i).get("title") + "<br><a href=\""+responses.get(i).get("url")+"\">"+"<b>Link :</b>"+"</a>"+ "<br><b>Info :</b>"+responses.get(i).get("desc");
                 listValues.add(item);
             }
 
             ListView listView = (ListView) findViewById(R.id.listView);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_row_item,listValues);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_row_item,listValues)
+            {
+                @Override
+                public View getView(int position, View convertView, ViewGroup parent)
+                {
+                    View row;
+
+                    if (null == convertView) {
+                        row = LayoutInflater.from(getContext()).inflate(R.layout.list_row_item,null);
+                    } else {
+                        row = convertView;
+                    }
+
+                    TextView tv = (TextView) row.findViewById(R.id.rowTextView);
+                    tv.setMovementMethod(LinkMovementMethod.getInstance());
+                    tv.setText(Html.fromHtml(getItem(position)));
+                    return row;
+                }
+            };
             listView.setAdapter(adapter);
             home.setOnClickListener(new View.OnClickListener() {
                 @Override
