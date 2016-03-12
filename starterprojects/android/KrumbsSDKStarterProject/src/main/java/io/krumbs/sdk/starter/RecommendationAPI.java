@@ -9,7 +9,7 @@ import android.util.Log;
  * Created by phani on 3/10/16.
  */
 public class RecommendationAPI extends AsyncTask {
-    final String ENDPOINT = "http://192.168.0.25:5000/recommend";
+    final String ENDPOINT = "http://ellipse.herokuapp.com/recommend";//"http://192.168.0.25:5000/recommend";
     double latitude;
     double longtitude;
 

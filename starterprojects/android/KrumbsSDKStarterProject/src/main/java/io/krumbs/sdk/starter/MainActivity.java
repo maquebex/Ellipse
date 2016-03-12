@@ -6,6 +6,9 @@
 package io.krumbs.sdk.starter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -16,7 +19,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import java.util.Map;
 
@@ -24,12 +26,11 @@ import io.krumbs.sdk.KrumbsSDK;
 import io.krumbs.sdk.krumbscapture.KCaptureCompleteListener;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
   private View cameraView;
   private View startCaptureButton;
-  private View helloText;
   LocationManager locManager;
-  Button reco;
+  View reco;
     private MockLocationProvider mock;
     double fromLat=0; double fromLong=0;
     public static String userID ;
@@ -39,11 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
     super.onCreate(savedInstanceState);
       setContentView(R.layout.activity_main);
-    startCaptureButton = findViewById(R.id.kcapturebutton);
-    reco = (Button) findViewById(R.id.recobutton);
-    helloText = findViewById(R.id.hello_world);
-    cameraView = findViewById(R.id.camera_container);
 
+      View buttonbackground = findViewById(R.id.kcapturebutton);
+      Drawable background = buttonbackground.getBackground();
+      background.setColorFilter(Color.argb(0,255,255,255), PorterDuff.Mode.MULTIPLY);
+
+      startCaptureButton = findViewById(R.id.kcapturebutton);
+    reco = findViewById(R.id.recommend);
+    cameraView = findViewById(R.id.camera_container);
       // Set Mock location
       mock = new MockLocationProvider(LocationManager.GPS_PROVIDER, this);
       //Set test location
@@ -69,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startCaptureButton.setVisibility(View.INVISIBLE);
-                helloText.setVisibility(View.INVISIBLE);
                 cameraView.setVisibility(View.VISIBLE);
                 startCapture();
             }
@@ -132,12 +135,10 @@ public class MainActivity extends AppCompatActivity {
                   Log.i("KRUMBS-CALLBACK", mediaJSONUrl + ", " + imagePath);
                   cameraView.setVisibility(View.INVISIBLE);
                   startCaptureButton.setVisibility(View.VISIBLE);
-                  helloText.setVisibility(View.VISIBLE);
               } else if (completionState == CompletionState.CAPTURE_CANCELLED ||
                       completionState == CompletionState.SDK_NOT_INITIALIZED) {
                   cameraView.setVisibility(View.INVISIBLE);
                   startCaptureButton.setVisibility(View.VISIBLE);
-                  helloText.setVisibility(View.VISIBLE);
               }
           }
       });
@@ -171,7 +172,4 @@ public class MainActivity extends AppCompatActivity {
            new FoursquareAPI(fromLat,fromLong,mediaJSONURL).execute();
        }
    }
-
-
-
 }

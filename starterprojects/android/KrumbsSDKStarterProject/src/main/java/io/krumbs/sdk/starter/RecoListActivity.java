@@ -38,7 +38,7 @@ public class RecoListActivity extends AppCompatActivity {
             ArrayList<String> listValues = new ArrayList<String>();
             for(int i = 0 ; i < responses.size() ; i++)
             {
-                String item = "<b>Event :</b>"+responses.get(i).get("title") + "<br><a href=\""+responses.get(i).get("url")+"\">"+"<b>Link :</b>"+"</a>"+ "<br><b>Info :</b>"+responses.get(i).get("desc");
+                String item = "<b>Event :</b>"+responses.get(i).get("title") + "<br><a href=\""+responses.get(i).get("url")+"\">"+"<b>Link</b>"+"</a>"+ "<br><b>Info :</b>"+responses.get(i).get("desc");
                 listValues.add(item);
             }
 

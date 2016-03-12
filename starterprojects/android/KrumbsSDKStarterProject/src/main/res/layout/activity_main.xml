@@ -4,43 +4,59 @@
   ~
   -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity"
-    android:id="@+id/parent_container">
-
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/hello_world" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/kcapturebuttonLabel"
-        android:id="@+id/kcapturebutton"
-        android:layout_below="@+id/hello_world"
-        android:layout_centerHorizontal="true" />
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:id="@+id/parent_container"
+    android:background="@drawable/bkg3">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/camera_container">
+        android:id="@+id/camera_container"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-        <Button
-            android:layout_width="wrap_content"
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="105dp"
+            android:layout_height="101dp"
+            android:text="@string/kcapturebuttonLabel"
+            android:id="@+id/kcapturebutton"
+            android:src="@drawable/kcap_large"
+            android:layout_gravity="center"
+            android:contentDescription="kcapturebutton"
+            android:background="@null"
+            android:scaleType="fitXY" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="71dp"
+            android:layout_height="74dp"
+            android:id="@+id/recommend"
+            android:layout_marginRight="41dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="120dp"
+            android:src="@drawable/reco"
+            android:layout_gravity="right|bottom" />
+
+        <TextView
+            android:layout_width="193dp"
             android:layout_height="wrap_content"
-            android:text="Recommendation"
-            android:id="@+id/recobutton"
-            android:layout_gravity="center_horizontal|bottom" />
+            android:id="@+id/title"
+            android:layout_gravity="center_horizontal|top"
+            android:text="jagah"
+            android:layout_marginTop="20px"
+            android:typeface="monospace"
+            android:textStyle="bold"
+            android:textSize="22pt"
+            android:textAlignment="center"
+            android:textColor="#fdf0e5"
+            android:gravity="center_horizontal" />
     </FrameLayout>
 
 </RelativeLayout>

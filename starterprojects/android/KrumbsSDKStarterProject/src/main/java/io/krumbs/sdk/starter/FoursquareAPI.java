@@ -141,7 +141,7 @@ public class FoursquareAPI extends AsyncTask{
             e.printStackTrace();
         }
         // make post call to backend
-        //int retCode = WebServiceCall.postData("http://ellipse.herokuapp.com/checkin", checkin);
-        int retCode = WebServiceCall.postData("http://192.168.0.25:5000/checkin", checkin);
+        int retCode = WebServiceCall.postData("http://ellipse.herokuapp.com/checkin", checkin);
+        //int retCode = WebServiceCall.postData("http://192.168.0.25:5000/checkin", checkin);
     }
 }
