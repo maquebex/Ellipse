@@ -34,29 +34,34 @@
             android:background="@null"
             android:scaleType="fitXY" />
 
-        <android.support.design.widget.FloatingActionButton
-            android:layout_width="71dp"
-            android:layout_height="74dp"
-            android:id="@+id/recommend"
-            android:layout_marginRight="41dp"
-            android:layout_marginEnd="41dp"
-            android:layout_marginBottom="120dp"
-            android:src="@drawable/reco"
-            android:layout_gravity="right|bottom" />
-
         <TextView
-            android:layout_width="193dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:id="@+id/title"
             android:layout_gravity="center_horizontal|top"
-            android:text="jagah"
-            android:layout_marginTop="20px"
+            android:text="Ellipse"
+            android:layout_marginTop="200px"
             android:typeface="monospace"
             android:textStyle="bold"
             android:textSize="22pt"
             android:textAlignment="center"
-            android:textColor="#fdf0e5"
+            android:textColor="#191817"
             android:gravity="center_horizontal" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="105dp"
+            android:layout_height="101dp"
+            android:id="@+id/recommend"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="120dp"
+            android:src="@drawable/reco"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:contentDescription="kcapturebutton"
+            android:text="@string/kcapturebuttonLabel"
+            />
     </FrameLayout>
 
 </RelativeLayout>

@@ -23,7 +23,7 @@ public class RecommendationAPI extends AsyncTask {
     }
     @Override
     protected Object doInBackground(Object[] params) {
-        String response = WebServiceCall.getData(ENDPOINT+"?uid=1&loc=" + latitude + "," + longtitude);
+        String response = WebServiceCall.getData(ENDPOINT+"?uid="+MainActivity.userID+"&loc=" + latitude + "," + longtitude);
         Log.d("NEXTGEN", "WEB RES from EVENTFUL" + response);
         startRecoActivity(response);
         return "";

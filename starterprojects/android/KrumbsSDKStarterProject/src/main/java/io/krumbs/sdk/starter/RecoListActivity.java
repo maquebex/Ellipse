@@ -2,17 +2,11 @@ package io.krumbs.sdk.starter;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,17 +25,24 @@ public class RecoListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reco_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton home = (FloatingActionButton)findViewById(R.id.capture);
+        //FloatingActionButton home = (FloatingActionButton)findViewById(R.id.capture);
         try {
             jsonArr = new JSONArray(getIntent().getStringExtra("jsonData"));
             ArrayList<HashMap<String,String>> responses = parseJsonData(jsonArr);
-            ArrayList<String> listValues = new ArrayList<String>();
+            ArrayList<Event> listValues = new ArrayList<Event>();
             for(int i = 0 ; i < responses.size() ; i++)
             {
-                String item = "<b>Event :</b>"+responses.get(i).get("title") + "<br><a href=\""+responses.get(i).get("url")+"\">"+"<b>Link</b>"+"</a>"+ "<br><b>Info :</b>"+responses.get(i).get("desc");
+                Event item = new Event(responses.get(i).get("title"),responses.get(i).get("desc"),responses.get(i).get("url"));
                 listValues.add(item);
             }
 
+            RecyclerView rv = (RecyclerView)findViewById(R.id.rv);
+            rv.setHasFixedSize(true);
+            LinearLayoutManager llm = new LinearLayoutManager(MainActivity.mContext);
+            rv.setLayoutManager(llm);
+            RVAdapter adapter = new RVAdapter(this,listValues);
+            rv.setAdapter(adapter);
+            /*
             ListView listView = (ListView) findViewById(R.id.listView);
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.list_row_item,listValues)
             {
@@ -62,13 +63,13 @@ public class RecoListActivity extends AppCompatActivity {
                     return row;
                 }
             };
-            listView.setAdapter(adapter);
-            home.setOnClickListener(new View.OnClickListener() {
+            listView.setAdapter(adapter);*/
+            /*home.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     backtoHomepage();
                 }
-            });
+            });*/
         } catch (JSONException e){
             e.printStackTrace();
         }

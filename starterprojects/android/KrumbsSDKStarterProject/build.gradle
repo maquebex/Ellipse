@@ -3,6 +3,8 @@ apply plugin: 'com.android.application'
 dependencies {
     compile 'io.krumbs.sdk:krumbs-sdk:1.0.7.5-SNAPSHOT'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:cardview-v7:21.0.0"
+    compile "com.android.support:recyclerview-v7:21.0.0"
 }
 
 android {

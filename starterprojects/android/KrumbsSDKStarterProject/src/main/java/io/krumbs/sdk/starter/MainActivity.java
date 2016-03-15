@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity{
     private MockLocationProvider mock;
     double fromLat=0; double fromLong=0;
     public static String userID ;
+    public static Context mContext;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity{
       mock.pushLocation(33.648458, -117.841960); // Starbucks location
 
       MainActivity.userID = DeviceUtils.getUsername(this.getApplicationContext());
-
+      MainActivity.mContext = this.getApplicationContext();
     // user location
     try{
       locManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);

@@ -8,6 +8,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by maquebex on 3/2/2016.
@@ -22,6 +24,10 @@ public class FoursquareAPI extends AsyncTask{
     String temp="";
     public static boolean bFetchCategories = true;
     public ArrayList<String> foodCategories = new ArrayList<String>();
+    public ArrayList<String> entertainmentCategories = new ArrayList<String>();
+    public ArrayList<String> sportCategories = new ArrayList<String>();
+    private List<String> entertainmentTopCategories = Arrays.asList("Arts & Entertainment","Event","Nightlife Spot");
+    private List<String> sportTopCategories = Arrays.asList("Outdoors & Recreation");
 
     public FoursquareAPI(){}
     public FoursquareAPI(double lat,double longt,String url){
@@ -40,10 +46,14 @@ public class FoursquareAPI extends AsyncTask{
             bFetchCategories = false;
         }
 
+        //Fetch Krumbs Category
+        temp = WebServiceCall.getData(krumbsURL);
+        int type = getTypeFromKrumbs(temp);
+
         Log.d("NEXTGEN","HERE");
         temp = WebServiceCall.getData("https://api.foursquare.com/v2/venues/search?client_id=" + CLIENT_ID + "&client_secret=" + CLIENT_SECRET + "&v=20130815&ll=" + latitude + "," + longtitude);
         Log.d("NEXTGEN","FS Res "+temp);
-        ArrayList<String> tagsFromFourSquare = parseResult(temp);
+        ArrayList<String> tagsFromFourSquare = parseResult(temp,type);
         buildJSONandPostData(tagsFromFourSquare);
 
         return "";
@@ -53,7 +63,41 @@ public class FoursquareAPI extends AsyncTask{
         Log.d("NEXTGEN : onPostExecute", result);
     }
 
-    protected ArrayList<String> parseResult(String result)
+    protected int getTypeFromKrumbs(String data)
+    {
+        int type = 0;
+
+        try{
+            String categoryName = "Food";
+            JSONObject obj = new JSONObject(data);
+            JSONArray medArr = obj.getJSONArray("media");
+            if(medArr.length() > 0)
+            {
+                JSONArray whyArr = medArr.getJSONObject(0).getJSONArray("why");
+                if(whyArr.length() > 0)
+                {
+                    categoryName = whyArr.getJSONObject(0).getString("intent_category_name");
+                }
+            }
+
+            if(categoryName.equals("Entertainment"))
+            {
+                type = 1;
+            }
+            else if(categoryName.equals("Sports"))
+            {
+                type = 2;
+            }
+        }
+        catch(JSONException e) {
+            e.printStackTrace();
+        }
+
+        return type;
+    }
+
+
+    protected ArrayList<String> parseResult(String result,int type)
     {
         // Parse JSON to get the tags associated.
         ArrayList<String> tags = new ArrayList<String>();
@@ -67,7 +111,9 @@ public class FoursquareAPI extends AsyncTask{
                 for(int j = 0; j < categories.length() ; j++)
                 {
                     String currCategory = categories.getJSONObject(j).getString("name");
-                    if(foodCategories.contains(currCategory))
+                    if((type == 0 && foodCategories.contains(currCategory))
+                            || (type == 1 && entertainmentCategories.contains(currCategory))
+                            || (type == 2 && sportCategories.contains(currCategory)))
                     {
                         tags.add(currCategory);
                         break;
@@ -89,14 +135,23 @@ public class FoursquareAPI extends AsyncTask{
 
     protected void parseCategories(String result)
     {
-        // parse category list and get the food categories
+        // parse category list and get required categories
         try{
             JSONArray categoryArr = new JSONObject(result).getJSONObject("response").getJSONArray("categories");
             for(int i = 0 ; i < categoryArr.length() ; i++)
             {
-                if(categoryArr.getJSONObject(i).getString("name").equals("Food"))
+                String categoryName = categoryArr.getJSONObject(i).getString("name");
+                if(categoryName.equals("Food"))
                 {
-                    parseSubCategories(categoryArr.getJSONObject(i));
+                    parseSubCategories(categoryArr.getJSONObject(i),0);
+                }
+                else if(entertainmentTopCategories.contains(categoryName))
+                {
+                    parseSubCategories(categoryArr.getJSONObject(i),1);
+                }
+                else if(sportTopCategories.contains(categoryName))
+                {
+                    parseSubCategories(categoryArr.getJSONObject(i),2);
                 }
             }
         }
@@ -106,14 +161,23 @@ public class FoursquareAPI extends AsyncTask{
         }
     }
 
-    protected void parseSubCategories(JSONObject result)
+    protected void parseSubCategories(JSONObject result,int type)
     {
+        // type : 0 - food, 1 - entertainment, 2 - sport
         try{
             JSONArray currArray = result.getJSONArray("categories");
             for(int i = 0 ; i < currArray.length() ; i++)
             {
-                String currCategoryName = currArray.getJSONObject(i).getString("name");
-                foodCategories.add(currCategoryName);
+                JSONObject currObject = currArray.getJSONObject(i);
+                String currCategoryName = currObject.getString("name");
+                if(0 == type)
+                    foodCategories.add(currCategoryName);
+                else if(1 == type)
+                    entertainmentCategories.add(currCategoryName);
+                else
+                    sportCategories.add(currCategoryName);
+
+                parseSubCategories(currObject,type);
             }
         }
         catch(JSONException e)
