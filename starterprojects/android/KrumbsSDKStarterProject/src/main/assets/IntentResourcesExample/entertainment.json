@@ -19,7 +19,7 @@
           "Radiant",
           "Bonheur"
         ],
-        "unicode": "1f600",
+        "unicode": "1f604",
         "expression_id": 1,
         "resource_name": "emoji_1f600"
       }
@@ -34,9 +34,25 @@
           "Help!",
           "Fail"
         ],
-        "unicode": "1f634",
+        "unicode": "1f605",
         "expression_id": 4,
         "resource_name": "emoji_1f634"
+      }
+    },
+    {
+      "Neutral": {
+        "synonyms": [
+          "Neutral",
+          "Whatsup?",
+          "Chill",
+          "Hey",
+          "Hi",
+          "Howdy",
+          "Calm"
+        ],
+        "unicode": "1f607",
+        "expression_id": 3,
+        "resource_name": "emoji_1f607"
       }
     },
     {
@@ -75,25 +91,9 @@
           "Dogoftheday",
           "Petoftheday"
         ],
-        "unicode": "1f60d",
+        "unicode": "1f606",
         "expression_id": 2,
         "resource_name": "emoji_1f60d"
-      }
-    },
-    {
-      "Neutral": {
-        "synonyms": [
-          "Neutral",
-          "Whatsup?",
-          "Chill",
-          "Hey",
-          "Hi",
-          "Howdy",
-          "Calm"
-        ],
-        "unicode": "1f611",
-        "expression_id": 3,
-        "resource_name": "emoji_1f611"
       }
     }
   ]

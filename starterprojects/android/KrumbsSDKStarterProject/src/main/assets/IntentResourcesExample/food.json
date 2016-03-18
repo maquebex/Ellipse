@@ -19,9 +19,23 @@
           "Sweettooth",
           "Dessertporn"
         ],
-        "unicode": "1f60b",
+        "unicode": "1f601",
         "expression_id": 1,
         "resource_name": "emoji_1f60b"
+      }
+    },
+    {
+      "Neutral": {
+        "synonyms": [
+          "Neutral",
+          "Whatsup?",
+          "Chill",
+          "Hey",
+          "Hi"
+        ],
+        "unicode": "1f603",
+        "expression_id": 2,
+        "resource_name": "emoji_1f611"
       }
     },
     {
@@ -39,25 +53,9 @@
           "Donteatit",
           "Junk"
         ],
-        "unicode": "1f44e",
+        "unicode": "1f602",
         "expression_id": 3,
         "resource_name": "emoji_1f44e"
-      }
-    },
-    {
-      "Neutral": {
-        "synonyms": [
-          "Neutral",
-          "Whatsup?",
-          "Chill",
-          "Hey",
-          "Hi",
-          "Howdy",
-          "Calm"
-        ],
-        "unicode": "1f611",
-        "expression_id": 2,
-        "resource_name": "emoji_1f611"
       }
     }
   ]

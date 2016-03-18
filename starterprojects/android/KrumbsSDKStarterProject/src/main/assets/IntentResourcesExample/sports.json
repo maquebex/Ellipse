@@ -19,9 +19,9 @@
           "Radiant",
           "Bonheur"
         ],
-        "unicode": "1f600",
+        "unicode": "1f608",
         "expression_id": 1,
-        "resource_name": "emoji_1f600"
+        "resource_name": "emoji_1f608"
       }
     },
     {
@@ -50,9 +50,9 @@
           "Anxious",
           "Worthless"
         ],
-        "unicode": "1f611",
+        "unicode": "1f609",
         "expression_id": 2,
-        "resource_name": "emoji_1f611"
+        "resource_name": "emoji_1f609"
       }
     },
     {
@@ -62,7 +62,7 @@
           "Victory",
           "Winning"
         ],
-        "unicode": "1f44f",
+        "unicode": "1f610",
         "expression_id": 3,
         "resource_name": "emoji_1f44f"
       }

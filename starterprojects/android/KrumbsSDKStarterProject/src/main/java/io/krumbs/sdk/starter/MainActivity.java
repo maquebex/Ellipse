@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.Map;
 
@@ -52,7 +53,9 @@ public class MainActivity extends AppCompatActivity{
       // Set Mock location
       mock = new MockLocationProvider(LocationManager.GPS_PROVIDER, this);
       //Set test location
-      mock.pushLocation(33.648458, -117.841960); // Starbucks location
+      double testLat = 33.65219376978089;
+      double testLong = -117.74649512954056;
+      mock.pushLocation(testLat, testLong); // Starbucks location
 
       MainActivity.userID = DeviceUtils.getUsername(this.getApplicationContext());
       MainActivity.mContext = this.getApplicationContext();
@@ -66,8 +69,8 @@ public class MainActivity extends AppCompatActivity{
           fromLong =location.getLongitude();
           Log.d("NEXTGEN","Location is lat "+fromLat+"long "+fromLong);
       } else {
-          fromLat =33.6839470;
-          fromLong= -117.7946940;
+          fromLat =testLat;
+          fromLong= testLong;
           Log.d("NEXTGEN","NO Location preset to "+fromLat+" "+fromLong);
       }
         startCaptureButton.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +117,9 @@ public class MainActivity extends AppCompatActivity{
       }
   }
   private void startCapture() {
-    int containerId = R.id.camera_container;
+      ViewGroup.MarginLayoutParams lpt =(ViewGroup.MarginLayoutParams)reco.getLayoutParams();
+      lpt.setMargins(lpt.leftMargin,lpt.topMargin,lpt.rightMargin-180,lpt.bottomMargin+80);
+      int containerId = R.id.camera_container;
 // SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
       KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
           @Override
