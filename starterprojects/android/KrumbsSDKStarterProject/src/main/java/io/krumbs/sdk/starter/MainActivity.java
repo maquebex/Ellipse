@@ -119,6 +119,7 @@ public class MainActivity extends AppCompatActivity{
   private void startCapture() {
       ViewGroup.MarginLayoutParams lpt =(ViewGroup.MarginLayoutParams)reco.getLayoutParams();
       lpt.setMargins(lpt.leftMargin,lpt.topMargin,lpt.rightMargin-180,lpt.bottomMargin+80);
+
       int containerId = R.id.camera_container;
 // SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
       KrumbsSDK.startCapture(containerId, this, new KCaptureCompleteListener() {
