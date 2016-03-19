@@ -30,6 +30,7 @@ import io.krumbs.sdk.krumbscapture.KCaptureCompleteListener;
 public class MainActivity extends AppCompatActivity{
   private View cameraView;
   private View startCaptureButton;
+  private View buttonFrameView;
   LocationManager locManager;
   View reco;
     private MockLocationProvider mock;
@@ -48,14 +49,14 @@ public class MainActivity extends AppCompatActivity{
       background.setColorFilter(Color.argb(0,255,255,255), PorterDuff.Mode.MULTIPLY);
 
       startCaptureButton = findViewById(R.id.kcapturebutton);
-    reco = findViewById(R.id.recommend);
-    cameraView = findViewById(R.id.camera_container);
-      // Set Mock location
-      mock = new MockLocationProvider(LocationManager.GPS_PROVIDER, this);
+      reco = findViewById(R.id.recommend);
+      cameraView = findViewById(R.id.camera_container);
+
+      buttonFrameView = findViewById(R.id.button_container);
+
       //Set test location
-      double testLat = 33.65219376978089;
-      double testLong = -117.74649512954056;
-      mock.pushLocation(testLat, testLong); // Starbucks location
+      double testLat = 33.649191; //33.649191, -117.842281
+      double testLong = -117.842281;
 
       MainActivity.userID = DeviceUtils.getUsername(this.getApplicationContext());
       MainActivity.mContext = this.getApplicationContext();
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 startCaptureButton.setVisibility(View.INVISIBLE);
                 cameraView.setVisibility(View.VISIBLE);
+                buttonFrameView.setVisibility(View.INVISIBLE);
                 startCapture();
             }
         });
@@ -117,8 +119,8 @@ public class MainActivity extends AppCompatActivity{
       }
   }
   private void startCapture() {
-      ViewGroup.MarginLayoutParams lpt =(ViewGroup.MarginLayoutParams)reco.getLayoutParams();
-      lpt.setMargins(lpt.leftMargin,lpt.topMargin,lpt.rightMargin-180,lpt.bottomMargin+80);
+      /*ViewGroup.MarginLayoutParams lpt =(ViewGroup.MarginLayoutParams)reco.getLayoutParams();
+      lpt.setMargins(lpt.leftMargin,lpt.topMargin,lpt.rightMargin-180,lpt.bottomMargin+80);*/
 
       int containerId = R.id.camera_container;
 // SDK usage step 4 - Start the K-Capture component and add a listener to handle returned images and URLs
@@ -142,10 +144,12 @@ public class MainActivity extends AppCompatActivity{
                   Log.i("KRUMBS-CALLBACK", mediaJSONUrl + ", " + imagePath);
                   cameraView.setVisibility(View.INVISIBLE);
                   startCaptureButton.setVisibility(View.VISIBLE);
+                  buttonFrameView.setVisibility(View.VISIBLE);
               } else if (completionState == CompletionState.CAPTURE_CANCELLED ||
                       completionState == CompletionState.SDK_NOT_INITIALIZED) {
                   cameraView.setVisibility(View.INVISIBLE);
                   startCaptureButton.setVisibility(View.VISIBLE);
+                  buttonFrameView.setVisibility(View.VISIBLE);
               }
           }
       });
